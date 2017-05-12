@@ -11,47 +11,32 @@
  * @since 1.0
  * @version 1.0
  */
-  function print_field($field) {
+  
+  // Handles splitting up phone number with periods
+  function print_phone($field) {
     $input = get_sub_field($field);
-    $output = array();
+    $string = array();
     $is_one = $input[0] === '1';
-    $output[0] = $is_one ? mb_substr($input, 0, 4) : mb_substr($input, 0, 3);
-    $output[1] = $is_one ? mb_substr($input, 3, 3) : mb_substr($input, 2, 3);
-    $output[2] = $is_one ? mb_substr($input, 7) : mb_substr($input, 6);
-    
-    //echo $output[0] . '.' . $output[1] . '.' $output[2];
+    $string[0] = $is_one ? mb_substr($input, 0, 4) : mb_substr($input, 0, 3);
+    $string[1] = $is_one ? mb_substr($input, 3, 3) : mb_substr($input, 2, 3);
+    $string[2] = $is_one ? mb_substr($input, 7) : mb_substr($input, 6);
+    $output = $string[0] . '.' . $string[1] . '.' . $string[2];
+    return $output;
   }
-
 ?>
 
 <!-- ==== SECTION -> FOOT ==== -->
 <footer>
   <div class="col1">
-    <div class="top">
-      <h3>General Inquirires</h3>
-      <?php if ( have_rows( 'foot_g-inq', 'option' ) ) : while ( have_rows( 'foot_g-inq', 'option' ) ) : the_row(); 
-        if ( get_row_layout() === 'tele-true' ) : 
-          $tele = get_sub_field('foot_g-inq-tel'); ?>
-          <p>
-            <a href="tel:<?php echo $tele; ?>" target="_blank"><?php function('foot_g-inq-tel'); ?></a>
-          </p>
-        <?php elseif ( get_row_layout() === 'email-true' ) : ?>
-        
-        <?php endif; ?>
-      <?php endwhile;endif; ?>
-    </div>
-    <div class="bottom">
-      <h3>E-Commerce Inquirires</h3>  
-    </div>
+    <?php get_template_part('components/foot/col1'); ?>
   </div>
   <div class="col2">
-    
+    <?php get_template_part('components/foot/col2'); ?>
   </div>
   <div class="col3">
-    
+    <?php get_template_part('components/foot/col3'); ?>
   </div>
 </footer>
-
 
 </body><!-- end -->
 </html>
