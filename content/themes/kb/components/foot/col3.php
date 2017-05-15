@@ -7,8 +7,13 @@
 <div class="top">
   <h3><?php echo get_field('foot_newsletter_cta', 'options') ?></h3>
   <form>
-    <input type="email" name="news-email" placeholder="Enter Email Address">
-    <input type="submit" name="submit">
+    <div class="contain-input">
+      <input class="form-email" 
+        type="email" name="news-email" 
+        placeholder="Enter Email Address">
+    </div>
+    <input class="form-submit" 
+      type="submit" name="submit">
   </form>
 </div>
 <div class="bottom">

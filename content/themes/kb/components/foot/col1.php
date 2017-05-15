@@ -5,7 +5,7 @@
 ?>
 
 <div class="top">
-  <h3>General Inquirires</h3>
+  <h3>general inquries</h3>
   <?php if ( have_rows( 'foot_g-inq', 'option' ) ) : while ( have_rows( 'foot_g-inq', 'option' ) ) : the_row(); 
     if ( get_row_layout() === 'tele-true' ) : 
       $tele = get_sub_field('foot_g-inq-tel'); ?>
@@ -24,7 +24,7 @@
   <?php endwhile;endif; ?>
 </div>
 <div class="bottom">
-  <h3>E-Commerce Inquirires</h3>
+  <h3>e-commerce inquiries</h3>
   <?php if ( have_rows( 'foot_ec-inq', 'option' ) ) : while ( have_rows( 'foot_ec-inq', 'option' ) ) : the_row(); 
     if ( get_row_layout() === 'e-tele-true' ) : 
       $tele = get_sub_field('foot_g-inq-tel'); ?>

@@ -6,12 +6,12 @@
   $this_id = get_the_ID();
   $this_cat = wp_get_post_categories($this_id);
 ?>
-
-<!-- ==== POST ==== -->
 <article class="blog cat-<?php echo $this_cat[0]; ?>">
-  <h1><?php echo get_the_title(); ?></h1>
   <header>
     <?php echo get_field('afc_intro-p'); ?>
+    <p>
+      <?php echo get_the_content(); ?>
+    </p>
   </header>
   <div class="image-block">
     <?php if( have_rows('afc_img-r') ) : while ( have_rows( 'afc_img-r' ) ) : the_row(); 

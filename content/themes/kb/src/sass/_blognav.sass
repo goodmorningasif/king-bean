@@ -1,0 +1,64 @@
+/*  _blognav.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.blog-nav
+  margin: 125px auto 0
+  width: 700px
+  position: relative
+  
+  h3
+    width: 350px
+    height: 40px
+    padding-top: 12px
+    margin: 0 auto
+
+  .categories
+    +flex
+    margin: 30px
+
+  &:before, &:after
+    position: absolute
+    top: 0
+    transform: rotate(45deg)
+    padding-left: 40px
+    padding-top: 40px
+  
+  &:before
+    left: calc(50% - 195px)
+
+  &:after
+    right: calc(50% - 195px)
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.blog-nav
+
+  h3
+    font-family: 'Copperplate-Med', sans-serif
+    background-color: $litepink
+    color: $white
+    font-size: 0.8em
+    letter-spacing: 0.15em
+    text-transform: uppercase
+    text-align: center
+
+  &:before, &:after
+    content: " "
+    background-color: $white
+
+.categories li a
+  font-family: 'Copperplate-Med', sans-serif
+  font-size: 0.75em
+  color: $gold
+  text-transform: uppercase
+  letter-spacing: 0.15em
+
+
+

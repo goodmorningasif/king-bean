@@ -21,8 +21,7 @@
 
   /* Add Styles, Fonts, and Javascript */
   function my_enqueue_style() {
-    wp_enqueue_style('typography', 'https://cloud.typography.com/778678/7975772/css/fonts.css');
-    wp_enqueue_style('webtype', 'http://cloud.webtype.com/css/c7d7a6d5-4e15-4b27-bbae-3849f98e1ac4.css');
+    wp_enqueue_style('webfonts', $GLOBALS['url'].'/assets/fonts/webfonts.css');
     wp_enqueue_style('styles', $GLOBALS['url'].'/prod/styles.css');
     wp_enqueue_script('underscore', $GLOBALS['url'].'/prod/underscore.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('scripts-min', $GLOBALS['url'].'/prod/scripts.js', array('jquery'), '1.0.0', true);

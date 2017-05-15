@@ -10,22 +10,21 @@
 /* SITE CONTEXT -> Global styles */
 
 h1, h2, h3, h5, a
-  @extend .sweet-m
-  text-transform: uppercase
-  letter-spacing: 0.05em
-  color: $black
+
 
 p
-  @extend .goth-b
 
 
 html 
   box-sizing: border-box
+  background-color: $beige
 
 *, *:before, *:after
   box-sizing: inherit
 
 body
+  font-size: calc( 16px + ( 24 - 16 ) * ( 100vw - 320px ) / ( 2500 - 320 ) )
+  background-color: $white
 
 img
   width: 100%
@@ -33,3 +32,12 @@ img
 
 /* Styles ... */
 
+@import 'nav'
+
+@import 'blognav'
+
+@import 'blogposts'
+
+@import 'blogfoot'
+
+@import 'foot'

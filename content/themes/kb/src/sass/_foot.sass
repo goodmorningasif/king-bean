@@ -1,0 +1,119 @@
+/*  _foot.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+footer
+  +flex
+  width: 100vw
+  padding-top: 75px
+  padding-left: 150px
+  padding-right: 100px
+
+  .col1, .col2
+    flex: 0 0 auto
+    padding-right: 100px
+
+  .col3
+    flex: 1 0 auto
+    align-self: flex-end
+
+  h3, p
+    margin-bottom: 8px
+
+  .col1 .top
+    margin-bottom: 40px
+
+  .col2 .top
+    margin-bottom: 19px
+
+  .col1 .bottom, .col2 .bottom
+    padding-top: 20px
+ 
+form
+  .form-email
+    height: 30px
+
+  .form-submit, .contain-input
+    display: inline-block
+
+  .contain-input
+    position: relative
+    width: 240px
+    height: 35px
+    padding-left: 25px
+    
+
+    &:before, &:after
+      position: absolute
+      top: 3px
+      padding-left: 23px
+      padding-top: 23px
+      transform: rotate(45deg)
+
+    &:before
+      left: -12px
+
+    &:after
+      right: -12.5px
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+footer
+  background-color: $beige
+  font-family: 'UniversLT-Condensed', sans-serif
+  font-size: 0.7em
+  letter-spacing: 0.07em
+  text-transform: uppercase
+
+  .col1 p, .col1 p a, .col2 p, .col2 p a, 
+    color: $white
+  
+  .col1 h3, .col2 h3
+    color: $gold
+
+  .col3 h3
+    color: $white
+
+  .col1 .bottom, .col2 .bottom
+    border-top: 2px solid $gold
+
+  .col2 .bottom
+    font-size: 0.7em
+
+    p, p a
+      color: $gold
+  
+form
+  font-family: 'UniversLT-Condensed', sans-serif
+  
+  .form-email, .form-submit
+    background-color: transparent
+    border: none
+
+  .form-submit
+    color: $white
+
+
+  .contain-input
+    border-top: 2px solid $gold
+    border-bottom: 2px solid $gold
+
+    &:before, &:after
+      content: " "
+
+    &:before
+      border-top: 2px solid $gold
+      border-right: 2px solid $gold
+
+    &:after
+      // background-color: $gold
+      border-bottom: 2px solid $gold
+      border-left: 2px solid $gold
+
+
+

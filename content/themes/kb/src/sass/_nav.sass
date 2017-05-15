@@ -1,0 +1,63 @@
+/*  _nav.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+nav
+  position: relative
+  z-index: 100
+
+.special-offer
+  width: 100vw
+  height: 35px
+  background-color: $beige
+  padding-top: 12px
+
+.navigation
+  +flex
+  width: 100vw
+  height: 100px
+  position: fixed
+  top: 65px
+  left: calc(50% - 50vw)
+  padding-right: 40px
+  padding-left: 40px
+
+  .menu-toggle
+    flex: 0 0 70px
+    padding-top: 10px
+
+  .brand-logo
+    flex: 0 0 auto
+    > svg
+      width: 300px
+      height: 60px
+      margin: 0 auto
+
+  .shop-link
+    flex: 0 0 70px
+    text-align: right
+    > svg
+      width: 38px
+      height: 53px
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.special-offer
+  font-family: 'UniversLT-Condensed', sans-serif
+  font-size: 0.65em
+  color: $white
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  text-align: center
+
+.menu-toggle
+  font-family: 'Copperplate-Med', sans-serif
+  text-transform: uppercase
+  font-size: 0.9em
+  letter-spacing: 0.15em
+  color: $beige

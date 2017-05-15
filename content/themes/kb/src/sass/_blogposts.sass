@@ -1,0 +1,52 @@
+/*  _blogposts.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+article.blog
+  width: 950px
+  margin: 80px auto 160px
+
+  > header
+    > p 
+      margin-top: 40px
+
+article:nth-last-child(n)
+  margin-bottom: 60px
+
+.image-block
+  margin-top: 80px
+
+  .full-img:nth-child(n + 2), .left-img:nth-child(n + 2), .right-img:nth-child(n + 2)
+    margin-top: 43px
+
+  .left-img, .right-img
+    width: calc(50% - 23px)
+
+  .left-img
+    margin-right: 40px
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+article.blog
+
+  > header
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 1.8em
+    letter-spacing: 0.07em
+    line-height: 1.2em
+    color: $beige
+    text-align: center
+
+    > p
+      font-family: 'UniversLT-Condensed', sans-serif
+      font-size: 0.5em
+      letter-spacing: 0.07em
+      line-height: 1.4em
+
+      > a 
+        color: $gold

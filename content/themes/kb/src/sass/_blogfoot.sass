@@ -1,0 +1,38 @@
+/*  _blognav.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.blog-foot
+  +flex($b: center)
+  width: 400px
+  margin: 0 auto 60px
+
+  > .line
+    width: 60px
+    height: 2px
+    margin-top: 3px
+    margin-left: 10px
+    margin-right: 10px
+
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.blog-foot
+  > .prev, .next
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 0.6em
+    text-transform: uppercase
+    letter-spacing: 0.07em
+    color: $gold
+
+    a
+      color: $gold
+  
+  > .line
+    background-color: $gold

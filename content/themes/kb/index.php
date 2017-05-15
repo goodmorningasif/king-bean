@@ -14,10 +14,12 @@
 
   get_header(); ?>
 
+<?php get_template_part('/components/blog/blog-nav'); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <?php get_template_part('/components/blog/posts'); ?>
+  <?php get_template_part('/components/blog/blog-posts'); ?>
 <?php endwhile; else : ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
+<?php get_template_part('/components/blog/blog-foot'); ?>
 
 <?php get_footer();
