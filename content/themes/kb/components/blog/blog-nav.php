@@ -3,7 +3,7 @@
   * Section =>  Blog-Nav
   */
 ?>
-<!-- ==== SECTION -> POSTS ==== -->
+
 <div class="blog-nav">
 	<h3>Journal</h3>
 	<ul class="categories">

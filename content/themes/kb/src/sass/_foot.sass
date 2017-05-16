@@ -7,26 +7,56 @@
 footer
   +flex
   width: 100vw
-  padding-top: 75px
-  padding-left: 150px
-  padding-right: 100px
+  padding: 40px
+
+  +tablet
+    padding: 75px 100px 50px 150px
+
+  .top
+    height: 100%
+    padding-bottom: 10px
+
+    +tablet
+      min-height: 125px
+      padding-bottom: 0
+
+  .bottom
+    padding-bottom: 30px
+
+    +tablet
+      padding-bottom: 0
 
   .col1, .col2
-    flex: 0 0 auto
-    padding-right: 100px
+    flex: 1 0 100%
+
+    +tablet
+      flex: 0 0 auto
+      padding-right: 40px
+
+    +desktop
+      padding-right: 100px
 
   .col3
-    flex: 1 0 auto
-    align-self: flex-end
+    +flex
+    flex-direction: column
+    flex: 0 0 auto
+
+    .top, .bottom
+      width: 300px
+      align-self: flex-end
+
+    h3
+      margin-bottom: 12px
+
+    .bottom
+      h3
+        margin-top: 8px
+
+    +tablet
+      flex: 1 0 auto
 
   h3, p
     margin-bottom: 8px
-
-  .col1 .top
-    margin-bottom: 40px
-
-  .col2 .top
-    margin-bottom: 19px
 
   .col1 .bottom, .col2 .bottom
     padding-top: 20px
@@ -34,16 +64,19 @@ footer
 form
   .form-email
     height: 30px
+    width: 190px
 
   .form-submit, .contain-input
-    display: inline-block
+    margin-bottom: 15px
+
+    +tablet
+      display: inline-block
 
   .contain-input
     position: relative
     width: 240px
     height: 35px
     padding-left: 25px
-    
 
     &:before, &:after
       position: absolute
@@ -58,13 +91,25 @@ form
     &:after
       right: -12.5px
 
+.social-box
+  +flex($b: flex-start)
+
+  svg
+    width: 25px
+    height: 25px
+    margin-right: 15px
+
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 footer
+  background: url('../assets/svg/king-bean-stamp.svg')
   background-color: $beige
+  background-size: 120% 120%
+  background-position: 0 -40px
+  background-repeat: no-repeat
   font-family: 'UniversLT-Condensed', sans-serif
   font-size: 0.7em
   letter-spacing: 0.07em
@@ -96,8 +141,24 @@ form
     border: none
 
   .form-submit
+    font-family: 'UniversLT-Condensed', sans-serif
     color: $white
+    letter-spacing: 0.07em
+    text-transform: uppercase
 
+  .form-email
+    font-family: 'UniversLT-Condensed', sans-serif
+    color: $gold
+    text-transform: uppercase
+    font-size: 0.8em
+    letter-spacing: 0.07em
+
+    +placeholder
+      font-family: 'UniversLT-Condensed', sans-serif
+      color: $gold
+      text-transform: uppercase
+      font-size: 1em
+      letter-spacing: 0.07em
 
   .contain-input
     border-top: 2px solid $gold
@@ -111,9 +172,5 @@ form
       border-right: 2px solid $gold
 
     &:after
-      // background-color: $gold
       border-bottom: 2px solid $gold
       border-left: 2px solid $gold
-
-
-

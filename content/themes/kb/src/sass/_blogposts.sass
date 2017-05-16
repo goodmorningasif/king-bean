@@ -5,8 +5,15 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 article.blog
-  width: 950px
+  width: 80%
   margin: 80px auto 160px
+
+  +tablet
+    width: 850px
+
+  +desktop
+    width: 950px
+
 
   > header
     > p 
@@ -16,16 +23,28 @@ article:nth-last-child(n)
   margin-bottom: 60px
 
 .image-block
-  margin-top: 80px
+  margin-top: 60px
+
+  +tablet
+    margin-top: 80px
 
   .full-img:nth-child(n + 2), .left-img:nth-child(n + 2), .right-img:nth-child(n + 2)
-    margin-top: 43px
+    margin-top: 13px
+
+    +tablet
+      margin-top: 43px
 
   .left-img, .right-img
-    width: calc(50% - 23px)
+    width: calc(50% - 8px)
+
+    +tablet
+      width: calc(50% - 23.5px)
 
   .left-img
-    margin-right: 40px
+    margin-right: 10px
+
+    +tablet
+      margin-right: 40px
 
 
 /* OBJECTS -> For styling objects */
