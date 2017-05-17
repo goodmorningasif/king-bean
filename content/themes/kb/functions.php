@@ -61,6 +61,12 @@
     echo "<script>console.log('".$var.", outputs ".$mes."');</script>";
   }
   
+
+  /**
+  *
+  * Adds option tab
+  *
+  */
   if( function_exists('acf_add_options_page') ) {
     
     acf_add_options_page();
