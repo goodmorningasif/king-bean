@@ -5,34 +5,57 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .story
-  > h2
+  > h2, p
     width: 80%
-    margin: 80px auto 0
 
+    +tablet
+      width: 880px
+
+    +desktop
+      width: 960px
+
+  > h2
+    margin: 80px auto 0
+    
   > p
-    width: 80%
     margin: 40px auto 40px
+
 
   .story-image
     width: 100vw
     height: 100vh
 
 .people
-  width: 750px
+  width: 80%
   margin: 100px auto
+
+  +tablet
+    width: 750px
+  
+  +desktop
+    width: 950px
 
 .person
   +flex
   margin-bottom: 120px
 
   .name-title
-    flex: 0 0 45%
+    flex: 0 0 100%
+    margin-bottom: 75px
+
+    +tablet
+      flex: 0 0 45%
+      margin-bottom: 0
 
     h3
       position: relative
-      width: 270px
+      width: 100%
+
+      +tablet
+        width: 270px
     
     h3:last-child
+
       &:after
         content: " "
         padding-top: 12%
@@ -42,18 +65,30 @@
         left: 0
         
   .bio
-    flex: 0 0 55%
+    flex: 0 0 100%
     position: relative
 
+    +tablet
+      flex: 0 0 55%
+
     p
-      width: 400px
+      width: 70%
+
       &:after
         content: " "
         padding-top: 10px
-        padding-left: 440px
+        padding-left: 75%
         position: absolute
         bottom: -40px
-        left: -21px
+        left: -11px
+
+        +tablet
+          padding-left: 440px
+          bottom: -40px
+          left: -21px
+
+      +tablet
+         width: 400px
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */

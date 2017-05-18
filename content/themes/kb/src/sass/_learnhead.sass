@@ -4,19 +4,23 @@
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
-.head
+.learn-head
   +img
   width: 100vw
   height: 100vh
   position: relative
 
   h1
-    width: 800px
+    width: 80%
     height: 100%
     position: relative
     z-index: 20
     margin: 0 auto
-    padding-top: 40vh
+    padding-top: 20vh
+
+    +tablet
+      width: 800px
+      padding-top: 40vh
 
     +desktop
       width: 950px
@@ -34,15 +38,18 @@
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
-.head
+.learn-head
   h1
     color: $white
     font-family: 'DINEngschriftStd', sans-serif
-    font-size: 2.7em
+    font-size: 2.1em
     letter-spacing: 0.08em
     line-height: 1.2em
     text-transform: uppercase
     text-align: center
+
+    +tablet
+      font-size: 2.7em
 
 .overlay
   background-color: rgba(0,0,0,0.2)

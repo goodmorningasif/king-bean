@@ -5,27 +5,52 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .roaster
+  margin-bottom: 100px
   > h3
     width: 73%
     margin: 100px auto
 
+    +tablet
+      width: 850px
+
+    +desktop
+      width: 950px
+
 .facts
   +flex
-  width: 750px
+  width: 80%
   margin: 0 auto
 
-  .image, .copy 
-    flex: 0 0 50%
-  
-  .image:nth-child(2n)
-    order: 2
+  +tablet
+    width: 750px
 
-  .copy:nth-child(2n)
-    order: 1
+  .image, .copy 
+    flex: 0 0 100%
+
+    +tablet
+      flex: 0 0 50%
   
   .image
-    > img 
+    order: 2
+
+    +tablet
+      order: 1
+
+  .copy
+    order: 1
+
+    +tablet
+      order: 2
+
+  .image
+    img 
+      display: block
+      width: 250px
+      margin: 0 auto
+
+    +tablet
       padding-right: 75px
+      width: 100%
 
   .copy
     > h3
@@ -36,14 +61,39 @@
       margin-top: 20px
 
     > p
-      width: 310px
+      width: 290px
       margin: 30px auto
       text-align: center
 
+      +tablet 
+        width: 310px
+
     > p 
       svg
+        width: 150px
+        height: 37px
+
+      +tablet
         width: 200px
         height: 49px
+
+.data
+  .num
+    position: relative
+    margin-bottom: 16px
+
+    &:after
+      content: " "
+      padding-top: 20px
+      padding-left: 46px
+      position: absolute
+      bottom: -25px
+      left: calc(50% - 23px)
+
+      +tablet
+        padding-left: 60px
+        left: calc(50% - 30px)
+
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -86,6 +136,10 @@
 
   > .num
     font-size: 2em
+
+    &:after
+      background-image: url('../assets/svg/unit-bar.svg')
+      background-repeat: no-repeat
 
   > .unit
     font-size: 1em
