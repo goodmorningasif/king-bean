@@ -12,15 +12,15 @@
 </p>
 <?php $image = get_field('st_image'); ?>
 <div class="story-image"
-  style="background: url(<?php echo $image['url']; ?>)">
+  style="background-image: url(<?php echo $image['url']; ?>)">
 </div>
 <div class="people">
 	<?php $count = 0;
 	  if ( have_rows('st_people') ) : while ( have_rows('st_people') ) : the_row();  ?>
-		<div class="person-<?php echo $count; ?>">
+		<div class="person id-<?php echo $count; ?>">
 		  <div class="name-title">
   		  <h3>
-  		    <?php echo get_sub_field('st_person'); ?>
+  		    <?php echo get_sub_field('st_person'); ?>&#44;
   		  </h3>
   		  <h3>
   		    <?php echo get_sub_field('st_title'); ?>

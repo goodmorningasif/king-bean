@@ -26,6 +26,7 @@
     wp_enqueue_script('underscore', $GLOBALS['url'].'/prod/underscore.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('scripts-min', $GLOBALS['url'].'/prod/scripts.js', array('jquery'), '1.0.0', true);
   }
+  
   add_action( 'wp_enqueue_scripts', 'my_enqueue_style' );
   // add_theme_support( 'post-thumbnails' );
 
@@ -71,6 +72,25 @@
     
     acf_add_options_page();
     
+  }
+
+  /**
+  *
+  * getCurrentPage
+  *
+  * Takes the REQUEST_URI and breaks down the string to return current page
+  * ex: /examplesite/currentpage
+  * getCurentPage() -> 'currentpage'
+  */
+
+  function getCurrentPage(){
+    $page_uri = $_SERVER['REQUEST_URI'];
+    $uri_array = explode( '/', $page_uri );
+    if ($uri_array[2]) {
+      return $uri_array[2];
+    } else {
+      return 'index';
+    }
   }
 
 ?>

@@ -4,7 +4,102 @@
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
+.story
+  > h2
+    width: 80%
+    margin: 80px auto 0
+
+  > p
+    width: 80%
+    margin: 40px auto 40px
+
+  .story-image
+    width: 100vw
+    height: 100vh
+
+.people
+  width: 750px
+  margin: 100px auto
+
+.person
+  +flex
+  margin-bottom: 120px
+
+  .name-title
+    flex: 0 0 40%
+
+    h3
+      position: relative
+      padding-right: 30px
+    
+    h3:last-child
+      &:after
+        content: " "
+        padding-top: 12%
+        padding-left: 12%
+        position: absolute
+        bottom: -50px
+        left: 0
+        
+  .bio
+    flex: 0 0 60%
+    position: relative
+
+    &:after
+      content: " "
+      padding-top: 12%
+      padding-left: 12%
+      postion: absolute
+      bottom: 50px
+      left: 0
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
+
+.story
+  > h2
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 1.8em
+    letter-spacing: 0.07em
+    line-height: 1.2em
+    color: $beige
+    text-align: center
+
+  > p
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 0.9em
+    letter-spacing: 0.07em
+    line-height: 1.4em
+    color: $beige
+    text-align: center
+
+.story-image
+  +img
+
+.name-title
+  h3
+    color: $gold
+    font-family: 'DINEngschriftStd', sans-serif
+    font-size: 2.7em
+    letter-spacing: 0.08em
+    line-height: 1.2em
+    text-transform: uppercase
+    text-align: left
+  
+  h3:last-child
+    &:after
+      background-image: url('../assets/svg/drop.svg')
+      background-repeat: no-repeat
+
+.bio
+  font-family: 'UniversLT-Condensed', sans-serif
+  font-size: 0.9em
+  letter-spacing: 0.07em
+  line-height: 1.4em
+  color: $beige
+  text-align: left
+
+  &:after
+    background-image: url('../assets/svg/lower-bar.svg')
+    background-repeat: no-repeat

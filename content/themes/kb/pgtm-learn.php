@@ -17,7 +17,7 @@
   <!-- ==== SECTION -> HEAD ==== -->
   <?php $image = get_field('bn_image'); ?>
   <section class="head" 
-    style="background: url(<?php echo $image['url']; ?>)">
+    style="background-image: url(<?php echo $image['url']; ?>)">
     <?php get_template_part('/components/learn/head'); ?>
   </section>
 

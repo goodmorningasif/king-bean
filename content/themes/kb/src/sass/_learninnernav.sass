@@ -1,10 +1,32 @@
-/*  _learninnernav.sass */
+/* _learninnernav.sass */
 
 /* PAGE CONTEXT -> For positioning items */
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
+.learn-nav
+  margin-top: 100px
+  
+.links
+  +flex
+  margin: 0 auto
+  width: 350px
+
+  li
+    display: inline-block
+
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
-/* INCEPTION RULE: DO NOT nest more than 4  */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+.links
+  font-family: 'Copperplate-Med', sans-serif
+  font-size: 0.8em
+  letter-spacing: 0.15em
+  text-transform: uppercase
+  text-align: center
+
+  a
+    color: $gold
+
