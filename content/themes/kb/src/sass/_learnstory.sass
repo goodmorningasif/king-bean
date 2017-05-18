@@ -26,11 +26,11 @@
   margin-bottom: 120px
 
   .name-title
-    flex: 0 0 40%
+    flex: 0 0 45%
 
     h3
       position: relative
-      padding-right: 30px
+      width: 270px
     
     h3:last-child
       &:after
@@ -42,16 +42,18 @@
         left: 0
         
   .bio
-    flex: 0 0 60%
+    flex: 0 0 55%
     position: relative
 
-    &:after
-      content: " "
-      padding-top: 12%
-      padding-left: 12%
-      postion: absolute
-      bottom: 50px
-      left: 0
+    p
+      width: 400px
+      &:after
+        content: " "
+        padding-top: 10px
+        padding-left: 440px
+        position: absolute
+        bottom: -40px
+        left: -21px
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -93,13 +95,14 @@
       background-repeat: no-repeat
 
 .bio
-  font-family: 'UniversLT-Condensed', sans-serif
-  font-size: 0.9em
-  letter-spacing: 0.07em
-  line-height: 1.4em
-  color: $beige
-  text-align: left
+  p
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 0.9em
+    letter-spacing: 0.07em
+    line-height: 1.4em
+    color: $beige
+    text-align: left
 
-  &:after
-    background-image: url('../assets/svg/lower-bar.svg')
-    background-repeat: no-repeat
+    &:after
+      background-image: url('../assets/svg/gold-bar.svg')
+      background-repeat: no-repeat

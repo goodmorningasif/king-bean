@@ -13,7 +13,9 @@
 	    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 	  </div>
 	  <div class="copy">
-	    <h3><?php echo get_sub_field('rs_facts-bold'); ?></h3>
+	    <h3>
+	      <?php echo get_sub_field('rs_facts-bold'); ?>
+	    </h3>
 	    <div class="data">
 	    	<div class="num">
 	    	  <?php echo get_sub_field('rs_facts-num'); ?>
@@ -22,6 +24,9 @@
 	    		<?php echo get_sub_field('rs_facts-num-unit'); ?>
 	    	</div>
 	    </div>
+	    <p>
+	      <?php echo get_sub_field('rs_facts-light'); ?>
+	    </p>
 	    <p>
 	    	<?php if( get_sub_field('rs_facts-script') ) :
 	    	  $script = get_sub_field('rs_facts-script');

@@ -4,7 +4,91 @@
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
+.roaster
+  > h3
+    width: 73%
+    margin: 100px auto
+
+.facts
+  +flex
+  width: 750px
+  margin: 0 auto
+
+  .image, .copy 
+    flex: 0 0 50%
+  
+  .image:nth-child(2n)
+    order: 2
+
+  .copy:nth-child(2n)
+    order: 1
+  
+  .image
+    > img 
+      padding-right: 75px
+
+  .copy
+    > h3
+      width: 200px
+      margin: 0 auto
+
+    > .data
+      margin-top: 20px
+
+    > p
+      width: 310px
+      margin: 30px auto
+      text-align: center
+
+    > p 
+      svg
+        width: 200px
+        height: 49px
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
+
+.roaster
+  > h3
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 1.8em
+    letter-spacing: 0.07em
+    line-height: 1.2em
+    color: $beige
+    text-align: center
+
+.facts
+  > .copy
+    > h3
+      font-family: 'UniversLT-CondensedBold', sans-serif
+      font-size: 1.2em
+      letter-spacing: 0.07em
+      line-height: 1.4em
+      color: $beige
+      text-align: center
+      text-transform: uppercase
+
+    > p
+      font-family: 'UniversLT-Condensed', sans-serif
+      font-size: 1em
+      letter-spacing: 0.07em
+      line-height: 1.2em
+      color: $beige
+      text-align: center
+
+.data
+  > .num, .unit
+    font-family: 'Copperplate-Med', sans-serif
+    letter-spacing: 0.07em
+    color: $gold
+    text-align: center
+
+  > .num
+    font-size: 2em
+
+  > .unit
+    font-size: 1em
+
+
+
