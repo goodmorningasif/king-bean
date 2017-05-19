@@ -1,0 +1,81 @@
+/* _faqquestions.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.questions
+  +flex
+  width: 90%
+  margin: 0 auto 100px
+
+  +tablet
+    width: 850px
+
+  .ordering, .shipping
+    flex: 0 0 100%
+    padding: 30px
+
+    +tablet
+      flex: 0 0 50%
+
+
+  .ordering-question, .shipping-question
+    margin-top: 25px
+
+    > p
+      margin-top: 8px
+
+    > ul li
+      margin-top: 20px
+      margin-left: 30px
+
+    li
+      position: relative
+
+      &:before
+        content: " "
+        padding-top: 18px
+        padding-left: 10px
+        position: absolute
+        top: 2px
+        left: -30px
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+.questions
+  
+  .ordering, .shipping
+    > h3
+      color: $gold
+      font-family: 'DINEngschriftStd', sans-serif
+      font-size: 1.4em
+      letter-spacing: 0.08em
+      line-height: 1.2em
+      text-transform: uppercase
+
+  .ordering-question, .shipping-question
+    > h3
+      color: $beige
+      font-family: 'UniversLT-Condensed', sans-serif
+      font-size: 0.8em
+      letter-spacing: 0.04em
+      line-height: 1.2em
+      text-transform: uppercase
+
+    > p, > ul li
+      color: $beige
+      font-family: 'UniversLT-Condensed', sans-serif
+      font-size: 0.7em
+      letter-spacing: 0.04em
+      line-height: 1.4em
+
+    li
+      &:before
+        background-image: url('../assets/svg/drop-2.svg')
+        background-repeat: no-repeat
+
+
