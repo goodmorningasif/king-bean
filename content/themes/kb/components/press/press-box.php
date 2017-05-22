@@ -19,7 +19,7 @@
     $image = get_field('press_image'); ?>
 
     <div class="press-clipping">
-      <div>
+      <div class="date">
         <?php echo get_the_date('M Y'); ?>
       </div>
       <div class="image" 
@@ -31,6 +31,10 @@
       <h3>
         <?php echo get_the_title(); ?>
       </h3>
+      <a class="read-more" target="_blank"
+        href="<?php echo get_field('press_ctl'); ?>" >
+        Read More
+      </a>
     </div>
 
   <?php 
@@ -53,7 +57,7 @@
     $image = get_field('press_image'); ?>
 
     <div class="press-clipping">
-      <div>
+      <div class="date">
         <?php echo get_the_date('M Y'); ?>
       </div>
       <div class="image" 
@@ -65,6 +69,10 @@
       <h3>
         <?php echo get_the_title(); ?>
       </h3>
+      <a class="read-more" target="_blank"
+        href="<?php echo get_field('press_ctl'); ?>" >
+        Read More
+      </a>
     </div>
 
 <?php endwhile;endif; wp_reset_postdata(); ?>

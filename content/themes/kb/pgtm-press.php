@@ -2,7 +2,6 @@
 /** 
  * Template Name: Press
  *
- * Learn template file
  *
  * @link KB
  *

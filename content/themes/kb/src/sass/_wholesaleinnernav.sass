@@ -1,0 +1,57 @@
+/* _wholesaleinnernav.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.wholesale-nav
+  position: relative
+  
+  ul
+    +flex
+    width: 300px
+    margin: 125px auto 0
+    flex-direction: column
+
+    +tablet
+      flex-direction: row
+      width: 700px
+
+    +desktop
+      width: 800px
+
+    li
+      margin: 0 auto
+
+  h3
+    width: 80%
+    margin: 75px auto 50px
+
+    +tablet
+      width: 850px
+
+    +desktop
+      width: 950px
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+.wholesale-nav
+  ul li
+    font-family: 'Copperplate-Med', sans-serif
+    font-size: 0.75em
+    color: $gold
+    text-transform: uppercase
+    letter-spacing: 0.15em
+
+  li a
+    color: $gold
+
+  h3
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 1.7em
+    letter-spacing: 0.07em
+    line-height: 1.2em
+    color: $beige
+    text-align: center

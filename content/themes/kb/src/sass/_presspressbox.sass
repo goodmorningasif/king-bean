@@ -5,12 +5,131 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .press-box
-  +flex
+  +flex($b: flex-start)
+  width: 300px
+  margin: 75px auto 100px
+
+  +tablet
+    width: 750px
+
+  +desktop
+    width: 950px
 
   .press-clipping
-    flex: 0 0 33%
+    flex: 0 0 100%
+    height: 100%
+    margin-top: 25px
+
+    +tablet
+      flex: 0 0 calc(33% - 15px)
+      margin-top: 0
+
+    +desktop
+      flex: 0 0 calc(33% - 15px)
+
+  .press-clipping:nth-child(3n + 2)
+
+    +tablet
+      margin-left: 25px
+      margin-right: 25px
+
+  .press-clipping:nth-child(n + 4)
+
+    +tablet
+      margin-top: 25px
+
+.press-clipping
+
+  .date
+    margin-top: 25px
+
+  .image
+    width: 70%
+    padding-top: 90% 
+    margin: 25px auto
+
+    +tablet
+      width: 150px
+      height: 176px
+      padding-top: 0
+
+    +desktop
+      width: 230px
+      height: 270px
+
+
+  > p
+    padding-left: 10px
+    padding-right: 10px
+    margin-bottom: 40px
+
+  > h3
+    position: relative
+    margin: 0 auto 20px
+    width: 200px
+    height: 60px
+    // overflow: hidden
+
+
+    &:before
+      content: " "
+      padding-top: 2px
+      padding-left: 40px
+      position: absolute
+      top: -20px
+      left: calc(50% - 20px)
+
+  .read-more
+    display: block    
+    width: 100%
+    height: 40px
+    padding: 14px
 
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
+
+.press-box
+
+  .press-clipping
+    background-color: $offwhite
+
+    .date
+      font-family: 'Copperplate-Med', sans-serif
+      font-size: 0.6em
+      color: $beige
+      letter-spacing: 0.08em
+      text-align: center
+      text-transform: uppercase
+
+    .image
+      +img
+
+    > p
+      font-family: 'UniversLT-Condensed', sans-serif
+      font-size: 0.8em
+      color: $beige
+      text-align: center
+      line-height: 1.4em
+      text-transform: uppercase
+
+    > h3
+      font-family: 'DINEngschriftStd', sans-serif
+      font-size: 1.6em
+      color: $gold
+      letter-spacing: 0.08em
+      text-transform: uppercase
+      text-align: center
+
+      &:before
+        background-color: $gold
+
+    .read-more
+      font-family: 'Copperplate-Med', sans-serif
+      font-size: 0.7em
+      color: $white
+      background-color: $gold
+      letter-spacing: 0.15em
+      text-align: center
+      text-transform: uppercase

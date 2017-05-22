@@ -5,8 +5,58 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .press-head
+  margin-top: 110px
+
+  h1
+    position: relative
+    width: 300px
+    height: 40px
+    margin: 0 auto 30px
+    padding-top: 16px
+
+    +tablet
+      padding-top: 12px
+      width: 350px
+
+    &:before, &:after
+      content: " "
+      position: absolute
+      top: 0
+      transform: rotate(45deg)
+      padding-left: 40px
+      padding-top: 40px
+
+    &:before
+      left: calc(50% - 130px) 
+
+      +tablet
+        left: calc(50% - 195px)
+
+    &:after
+      right: calc(50% - 130px)
+
+      +tablet
+        right: calc(50% - 195px)
+
+  
+
 
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
+
+.press-head
+  
+  h1
+    background-color: $litepink
+    font-family: 'Copperplate-Med', sans-serif
+    background-color: $litepink
+    color: $white
+    font-size: 0.8em
+    letter-spacing: 0.15em
+    text-transform: uppercase
+    text-align: center
+
+    &:before, &:after
+      background-color: $white

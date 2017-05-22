@@ -25,18 +25,8 @@
       padding-top: 12px
       width: 350px
 
-  .categories
-    +flex
-    flex-direction: column
-    margin: 30px
-
-    li
-      margin: 0 auto
-
-    +tablet
-      flex-direction: row
-
   &:before, &:after
+    content: " "
     position: absolute
     top: 0
     transform: rotate(45deg)
@@ -57,6 +47,16 @@
     +tablet
       right: calc(50% - 195px)
 
+  .categories
+    +flex
+    flex-direction: column
+    margin: 30px
+
+    +tablet
+      flex-direction: row
+      
+    li
+      margin: 0 auto
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -74,7 +74,6 @@
     text-align: center
 
   &:before, &:after
-    content: " "
     background-color: $white
 
 .categories li a
