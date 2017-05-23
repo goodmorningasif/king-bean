@@ -14,22 +14,19 @@
   get_header(); ?>
 
 <section class="localpickup-head">
-  <h2>
-  	Loving our coffee and living in the Lowcountry has perks!
-  </h2>
-	<h1>
-
-	</h1>
+  <?php get_template_part('/components/localpickup/head'); ?>
 </section>
 
 <section class="localpickup-repeater">
-	
+  <?php get_template_part('/components/localpickup/repeater'); ?>
 </section>
+
 <section class="coming-soon">
-	
+  <?php get_template_part('/components/localpickup/commingsoon'); ?>
 </section>
+
 <section class="localpickup-faq">
-	
+  <?php get_template_part('/components/localpickup/faq'); ?>
 </section>
 
 <?php get_footer();

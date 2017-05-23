@@ -1,0 +1,222 @@
+/* _tipstips.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.tipsrepeater
+  margin: 125px auto
+  width: 80%
+  position: relative
+
+  +tablet 
+    width: 850px
+
+  +desktop
+    width: 950px
+
+  > h1
+    width: 200px
+    height: 40px
+    margin: 0 auto
+    padding-top: 16px
+    position: relative
+
+    +tablet
+      padding-top: 12px
+      width: 370px
+    
+    &:before, &:after
+      content: " "
+      position: absolute
+      top: 0
+      transform: rotate(45deg)
+      padding-left: 40px
+      padding-top: 40px
+
+    &:before
+      left: calc(50% - 130px) 
+
+      +tablet
+        left: calc(50% - 205px)
+
+    &:after
+      right: calc(50% - 130px)
+
+      +tablet
+        right: calc(50% - 205px)
+
+.tips-box
+  margin: 75px auto 0
+
+.tip-single:nth-child(2n-1)
+  position: relative
+  padding: 50px
+
+  &:after
+    content: " "
+    position: absolute
+    width: 60px
+    height: 40px
+    top: -30px
+    left: calc(50% - 30px) 
+
+  h3
+    margin-top: 30px
+
+  p 
+    margin-top: 20px
+  
+
+.tip-single:nth-child(2n)
+  +flex
+  position: relative
+  padding: 80px
+
+  .left
+    flex: 0 0 45%
+
+  .right
+    flex: 0 0 55%
+
+  .heading-1, .num
+    display: none
+
+  .heading-2
+    width: 70px
+    height: 100px
+    padding-top: 10px
+    padding-left: 6px
+
+  h3
+    margin-top: 40px
+  
+  p
+    margin-top: 40px
+
+
+.tip-single:nth-child(4n-2)
+
+  .left
+    order: 1
+
+  .right
+    order: 2
+
+.tip-single:nth-child(4n)
+
+  .left
+    order: 2
+
+  .right
+    order: 1
+  // background-color: $gold
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+.tipsrepeater
+  > h1
+    font-family: 'Copperplate-Med', sans-serif
+    background-color: $litepink
+    color: $white
+    font-size: 0.8em
+    letter-spacing: 0.15em
+    text-transform: uppercase
+    text-align: center
+
+    &:before, &:after
+      background-color: $white
+
+  .tip-single
+
+
+.tip-single:nth-child(2n-1)
+  border-style: dotted
+  border-width: 6px
+  border-image: url('../assets/svg/dots.svg') 33.33% round
+
+  &:after
+    +img($c: contain)
+    background-color: $white
+    background-image: url('../assets/svg/king-bean-coffee-crown.svg')
+
+  .heading-1
+    font-family: 'Copperplate-Med', sans-serif
+    font-size: 1em
+    color: $gold
+    letter-spacing: 0.15em
+    line-height: 1.4em
+    text-align: center
+    text-transform: uppercase
+
+  .heading-2
+    font-family: 'DINEngschriftStd', sans-serif
+    font-size: 3em
+    color: $gold
+    letter-spacing: 0.08em
+    line-height: 1.2em
+    text-align: center
+    text-transform: uppercase
+
+  h3
+    font-family: 'UniversLT-CondensedBold', sans-serif
+    color: $beige
+    font-size: 1.8em
+    letter-spacing: 0.04em
+    line-height: 1em
+    text-transform: uppercase
+    text-align: center
+
+  p
+    font-family: 'UniversLT-Condensed', sans-serif
+    color: $beige
+    font-size: 1.15em
+    letter-spacing: 0.04em
+    line-height: 1.4em
+    text-align: center
+
+
+.tip-single:nth-child(2n)
+  
+  .heading-2
+    +img($c: contain)
+    background-image: url('../assets/svg/banner.svg')
+    font-family: 'DINEngschriftStd', sans-serif
+    font-size: 2.7em
+    color: $white
+    letter-spacing: 0.08em
+    line-height: 1.2em
+    text-align: center
+    text-transform: uppercase
+
+  h3
+    font-family: 'DINEngschriftStd', sans-serif
+    color: $gold
+    font-size: 3em
+    letter-spacing: 0.04em
+    line-height: 1.2em
+    text-transform: uppercase
+    text-align: left   
+
+  p 
+    font-family: 'UniversLT-Condensed', sans-serif
+    color: $beige
+    font-size: 1.12em
+    letter-spacing: 0.04em
+    line-height: 1.4em
+
+.tip-single:nth-child(4n-2)
+  p
+    text-align: left
+
+.tip-single:nth-child(4n)
+  p
+    text-align: right
+
+  .left
+    padding-left: 60px
+

@@ -13,4 +13,9 @@
   
   get_header(); ?>
 
+
+<section class="tipsrepeater">
+  <?php get_template_part('/components/tips/repeater'); ?>
+</section>
+
 <?php get_footer();

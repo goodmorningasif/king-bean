@@ -1,0 +1,41 @@
+/* _localpickupcommingsoon.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.coming-soon
+  +flex
+  width: calc(80% - 30px)
+  height: 100%
+  margin: 0 auto
+  padding: 30px
+
+  h3, p
+    flex: 1 0 50%
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+.coming-soon
+  background-color: $offwhite
+
+  h3
+    color: $gold
+    font-family: 'UniversLT-CondensedBold', sans-serif
+    font-size: 1.9em
+    letter-spacing: 0.04em
+    line-height: 1.4em
+    text-align: center
+    text-transform: uppercase
+
+  p
+    color: $beige
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 0.9em
+    letter-spacing: 0.04em
+    line-height: 1.4em
+    text-transform: uppercase
+
+  

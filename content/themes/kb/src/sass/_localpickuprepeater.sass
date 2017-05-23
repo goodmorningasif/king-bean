@@ -1,0 +1,113 @@
+/* _localpickuprepeater.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.localpickup-repeater
+  width: 80%
+  margin: 50px auto 0
+
+  .script
+    svg
+      width: 200px
+      height: 35px
+      display: block
+      margin: 0 auto
+
+  > h3
+    width: 750px
+    margin: 0 auto
+
+.steps-repeater
+  +flex
+  margin-top: 75px
+
+  .step
+    flex: 1 0 40%
+    height: 440px
+    margin-left: 15px
+    margin-right: 15px
+    margin-bottom: 35px
+    position: relative
+
+    &:after
+      content: " "
+      position: absolute
+      width: 60px
+      height: 40px
+      top: -30px
+      left: calc(50% - 30px) 
+
+
+    .heading-1
+      margin-top: 30px
+
+    h3
+      padding-left: 80px
+      padding-right: 80px 
+      margin: 30px auto 0
+
+    p
+      width: 400px
+      margin: 10px auto 0
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4 */
+
+.localpickup-repeater
+  > h3
+    color: $beige
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 1.3em
+    letter-spacing: 0.08em
+    line-height: 1.4em
+    text-align: center
+
+  .step
+    border-style: dotted
+    border-width: 6px
+    border-image: url('../assets/svg/dots.svg') 33.33% round
+
+.step
+
+  &:after
+    +img($c: contain)
+    background-color: $white
+    background-image: url('../assets/svg/king-bean-coffee-crown.svg')
+
+  .heading-1
+    font-family: 'Copperplate-Med', sans-serif
+    font-size: 1em
+    color: $gold
+    letter-spacing: 0.15em
+    line-height: 1.4em
+    text-align: center
+
+  .heading-2
+    font-family: 'DINEngschriftStd', sans-serif
+    font-size: 3em
+    color: $gold
+    letter-spacing: 0.08em
+    line-height: 1.2em
+    text-align: center
+
+  h3
+    font-family: 'UniversLT-CondensedBold', sans-serif
+    color: $beige
+    font-size: 1.8em
+    letter-spacing: 0.04em
+    line-height: 1em
+    text-transform: uppercase
+    text-align: center
+
+  p
+    font-family: 'UniversLT-Condensed', sans-serif
+    color: $beige
+    font-size: 1.3em
+    letter-spacing: 0.08em
+    line-height: 1.4em
+    text-align: center
+
+
