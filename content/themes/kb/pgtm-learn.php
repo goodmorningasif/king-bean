@@ -27,17 +27,17 @@
   </div>  
 
 	<!-- ==== SECTION -> STORY ==== -->
-  <section class="story">
+  <section class="story" id="link-story">
     <?php get_template_part('/components/learn/story'); ?>
   </section>
 
 	<!-- ==== SECTION -> ROASTER ==== -->
-  <section class="roaster">
+  <section class="roaster" id="link-roaster">
     <?php get_template_part('/components/learn/roaster'); ?>
   </section>
 
 	<!-- ==== SECTION -> STOCKIST ==== -->
-  <section class="stockist">
+  <section class="stockist" id="link-stockist">
     <?php get_template_part('/components/learn/stockist'); ?>
   </section>
 

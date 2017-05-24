@@ -12,7 +12,11 @@
   padding: 30px
 
   h3, p
-    flex: 1 0 50%
+    flex: 0 0 100%
+    margin-top: 20px
+
+    +tablet
+      flex: 1 0 50%
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -26,16 +30,21 @@
     font-family: 'UniversLT-CondensedBold', sans-serif
     font-size: 1.9em
     letter-spacing: 0.04em
-    line-height: 1.4em
+    line-height: 1em
     text-align: center
     text-transform: uppercase
 
   p
     color: $beige
     font-family: 'UniversLT-Condensed', sans-serif
-    font-size: 0.9em
+    font-size: 0.7em
     letter-spacing: 0.04em
     line-height: 1.4em
     text-transform: uppercase
+    text-align: center
+
+
+    +tablet
+      font-size: 0.9em
 
   

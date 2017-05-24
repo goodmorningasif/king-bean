@@ -13,9 +13,15 @@
   <?php echo get_field('special_offer', 'option'); ?>
 </div>
 <div class="navigation <?php echo $current_page; ?>">
-  <div class="menu-toggle">Menu</div>
+  <div class="menu-toggle">
+    <a href="">
+      Menu
+    </a>
+  </div>
   <div class="brand-logo">
-    <?php echo file_get_contents($GLOBALS['url'].'/assets/svg/king-bean-text.svg'); ?>
+    <a href="http://<?php echo $GLOBALS['root']; ?>">
+      <?php echo file_get_contents($GLOBALS['url'].'/assets/svg/king-bean-text.svg'); ?>
+    </a>
   </div>
   <div class="shop-link">
     <?php echo file_get_contents($GLOBALS['url'].'/assets/svg/king-bean-seal.svg'); ?>

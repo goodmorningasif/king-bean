@@ -7,7 +7,8 @@
 <h3><?php echo get_field('rs_copy'); ?></h3>
 <div class="facts">
 	<?php $count = 0; 
-	  if ( have_rows('rs_facts') ) : while ( have_rows('rs_facts') ) : the_row();  
+	  if ( have_rows('rs_facts') ) : 
+	  	while ( have_rows('rs_facts') ) : the_row();  
 	    $image = get_sub_field('rs_facts-img'); ?>
 	  <div class="image">
 	    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">

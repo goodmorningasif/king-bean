@@ -5,7 +5,7 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .tipsrepeater
-  margin: 125px auto
+  margin: 100px auto
   width: 80%
   position: relative
 
@@ -16,32 +16,38 @@
     width: 950px
 
   > h1
-    width: 200px
-    height: 40px
+    width: 240px
+    height: 60px
     margin: 0 auto
-    padding-top: 16px
+    padding-top: 13px
+    padding-left: 30px
+    padding-right: 30px
     position: relative
 
     +tablet
       padding-top: 12px
       width: 370px
+      height: 40px
     
     &:before, &:after
       content: " "
       position: absolute
       top: 0
       transform: rotate(45deg)
-      padding-left: 40px
-      padding-top: 40px
+      padding-left: 60px
+      padding-top: 60px
 
+      +tablet
+        padding-left: 40px
+        padding-top: 40px
     &:before
-      left: calc(50% - 130px) 
+      left: calc(50% - 160px) 
 
       +tablet
         left: calc(50% - 205px)
 
     &:after
-      right: calc(50% - 130px)
+      right: calc(50% - 160px)
 
       +tablet
         right: calc(50% - 205px)
@@ -49,11 +55,16 @@
 .tips-box
   margin: 75px auto 0
 
+
+// Select Odd Children
 .tip-single:nth-child(2n-1)
   position: relative
-  padding: 50px
+  padding: 40px 10px
 
-  &:after
+  +tablet
+    padding: 50px
+
+  &:before
     content: " "
     position: absolute
     width: 60px
@@ -66,18 +77,27 @@
 
   p 
     margin-top: 20px
-  
 
+// Select Even Children
 .tip-single:nth-child(2n)
   +flex
   position: relative
-  padding: 80px
+  padding-bottom: 80px
+
+  +tablet
+    padding: 80px
 
   .left
-    flex: 0 0 45%
+    flex: 0 0 100%
+
+    +tablet
+      flex: 0 0 45%
 
   .right
-    flex: 0 0 55%
+    flex: 0 0 100%
+
+    +tablet
+      flex: 0 0 55%
 
   .heading-1, .num
     display: none
@@ -90,28 +110,89 @@
 
   h3
     margin-top: 40px
+
+    +tablet
+      min-height: 180px
+      width: 270px
   
   p
     margin-top: 40px
 
-
+// Select every other Even Children starting at 2
 .tip-single:nth-child(4n-2)
+  margin-top: 30px
+
+  &:before
+
+    +tablet
+      content: " "
+      position: absolute
+      width: 335px
+      height: 92px
+      top: -10px
+      left: calc(50% - 256px) 
 
   .left
-    order: 1
+    +tablet
+      padding-left: 40px
+      order: 1
 
   .right
-    order: 2
+    +tablet
+      order: 2
+      position: relative
 
+    &:after
+
+      +tablet
+        content: " "
+        position: absolute
+        width: 2px
+        height: 190px
+        bottom: -220px
+        left: calc(50% - 80px) 
+
+
+
+// Select every other Even Children starting at 4
 .tip-single:nth-child(4n)
+  margin-top: 30px
+
+  &:before
+
+    +tablet
+      content: " "
+      position: absolute
+      width: 335px
+      height: 92px
+      top: -10px
+      left: calc(50% - 256px) 
 
   .left
-    order: 2
+    +tablet
+      order: 2
+      padding-left: 60px
 
   .right
-    order: 1
-  // background-color: $gold
+    +tablet
+      order: 1
+      position: relative
 
+    &:after
+
+      +tablet
+        content: " "
+        position: absolute
+        width: 2px
+        height: 190px
+        bottom: -220px
+        right: 120px 
+
+.tip-single:last-child
+
+  .right    
+    &:after
+      display: none
 
 
 /* OBJECTS -> For styling objects */
@@ -125,6 +206,7 @@
     color: $white
     font-size: 0.8em
     letter-spacing: 0.15em
+    line-height: 1.3em
     text-transform: uppercase
     text-align: center
 
@@ -133,16 +215,21 @@
 
   .tip-single
 
-
+// Select Odd Children
 .tip-single:nth-child(2n-1)
   border-style: dotted
   border-width: 6px
   border-image: url('../assets/svg/dots.svg') 33.33% round
 
-  &:after
+  &:before
     +img($c: contain)
     background-color: $white
     background-image: url('../assets/svg/king-bean-coffee-crown.svg')
+
+  &:after
+    +img($c: contain)
+    background-color: $white
+    background-image: url('../assets/svg/tips-rtl.svg')
 
   .heading-1
     font-family: 'Copperplate-Med', sans-serif
@@ -179,7 +266,7 @@
     line-height: 1.4em
     text-align: center
 
-
+// Select Even Children
 .tip-single:nth-child(2n)
   
   .heading-2
@@ -209,14 +296,41 @@
     letter-spacing: 0.04em
     line-height: 1.4em
 
+// Select every other Even Children starting at 2
 .tip-single:nth-child(4n-2)
+
+  &:before
+    +img($c: contain)
+    background-color: $white
+    background-image: url('../assets/svg/tips-rtl.svg') 
+
   p
     text-align: left
+  
+  .right
 
+    &:after
+      +img($c: contain)
+      background-color: $white
+      background-image: url('../assets/svg/tips-down.svg')
+
+
+// Select every other Even Children starting at 4
 .tip-single:nth-child(4n)
-  p
-    text-align: right
 
-  .left
-    padding-left: 60px
+  &:before
+    +img($c: contain)
+    background-color: $white
+    background-image: url('../assets/svg/tips-ltr.svg')
+
+  p
+    +tablet
+      text-align: right
+
+  .right
+
+    &:after
+      +img($c: contain)
+      background-color: $white
+      background-image: url('../assets/svg/tips-down.svg')
 

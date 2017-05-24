@@ -1,0 +1,1 @@
+"use strict";var $j=jQuery.noConflict();$j(document).ready(function(){$j(".menu-toggle").click(function(e){e.preventDefault(),0===parseInt($j(".menu-popup").css("opacity"))?$j(".menu-popup").css({opacity:"1","z-index":"500"}):$j(".menu-popup").removeAttr("style")})});

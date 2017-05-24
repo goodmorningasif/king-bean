@@ -1,0 +1,65 @@
+/*  _homefeatureproduct.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.feature-products
+  width: 80%
+  margin: 120px auto 0
+
+.product-wrapper
+  +flex 
+
+  .single-product
+    flex: 0 0 100%
+    margin-bottom: 20px
+
+    +tablet
+      flex: 0 0 33.33%
+      margin-bottom: 0
+
+    .image 
+      width: 280px
+      height: 510px
+      margin: 0 auto
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.feature-products
+
+.product-wrapper
+  .single-product
+    .image
+      +img
+      
+    h3
+      font-family: 'Copperplate-Med', sans-serif
+      font-size: 0.8em
+      color: $beige
+      letter-spacing: 0.15em
+      text-align: center
+      text-transform: uppercase
+      text-align: center  
+
+    p
+      font-family: 'UniversLT-Condensed', sans-serif
+      font-size: 0.5em
+      color: $beige
+      letter-spacing: 0.08em
+      line-height: 2.5em
+      text-align: center
+      text-transform: uppercase
+      text-align: center  
+
+    .price
+      font-family: 'UniversLT-Condensed', sans-serif
+      font-size: 0.9em
+      color: $gold
+      letter-spacing: 0.08em
+      line-height: 2em
+      text-align: center
+      text-transform: uppercase
+      text-align: center  

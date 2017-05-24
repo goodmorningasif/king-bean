@@ -33,12 +33,14 @@
     line-height: 1.2em
 
   .faq-list
-    column-count: 2
-    -webkit-column-count: 2
-    -moz-column-count: 2
-    column-gap: 75px
-    -webkit-column-gap: 75px
-    -moz-column-gap: 75px
+
+    +tablet
+      column-count: 2
+      -webkit-column-count: 2
+      -moz-column-count: 2
+      column-gap: 75px
+      -webkit-column-gap: 75px
+      -moz-column-gap: 75px
 
     > h3
       color: $beige

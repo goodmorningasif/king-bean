@@ -2,15 +2,16 @@
   /*
   * Section =>  INNER NAV
   */
-?>
+?> 
 
 <ul>
 <?php
-  if ( have_rows( 'wh_content_repeater' ) ) : while( have_rows('wh_content_repeater') ) : the_row();
+  if ( have_rows( 'wh_content_repeater' ) ) : 
+    while( have_rows('wh_content_repeater') ) : the_row();
     $title = get_sub_field('wh_content-title');
     $title_id = str_replace(' ', '-', $title); ?>
     <li>
-      <a href="#<?php echo $title_id; ?>">
+      <a href="#link-<?php echo $title_id; ?>">
         <?php echo $title; ?>
       </a>
     </li>

@@ -2,13 +2,14 @@
   /*
   * Section =>  REPEATER
   */
-  if ( have_rows( 'wh_content_repeater' ) ) : while( have_rows('wh_content_repeater') ) : the_row();
+  if ( have_rows( 'wh_content_repeater' ) ) : 
+    while( have_rows('wh_content_repeater') ) : the_row();
     $title = get_sub_field('wh_content-title');
     $title_id = str_replace(' ', '-', $title); 
     $image = get_sub_field('wh_content-image'); ?>
 
     <div class="repeater" 
-      id="<?php echo $title_id; ?>">
+      id="link-<?php echo $title_id; ?>">
       <h3>
         <?php echo $title; ?>
       </h3>

@@ -10,26 +10,38 @@
 
   .script
     svg
-      width: 200px
-      height: 35px
+      width: 130px
+      height: 22px
       display: block
-      margin: 0 auto
+      margin: 0 auto 10px
+
+      +tablet
+        width: 200px
+        height: 35px
 
   > h3
-    width: 750px
+    width: 100%
     margin: 0 auto
+
+    +tablet
+      width: 750px
 
 .steps-repeater
   +flex
   margin-top: 75px
 
   .step
-    flex: 1 0 40%
-    height: 440px
-    margin-left: 15px
-    margin-right: 15px
+    flex: 0 0 100%
+    height: 100%
+    padding-bottom: 30px
     margin-bottom: 35px
     position: relative
+
+    +tablet
+      flex: 1 0 40%
+      height: 440px
+      margin-left: 15px
+      margin-right: 15px
 
     &:after
       content: " "
@@ -44,13 +56,16 @@
       margin-top: 30px
 
     h3
-      padding-left: 80px
-      padding-right: 80px 
       margin: 30px auto 0
+      width: 230px
 
     p
-      width: 400px
+      width: 220px
       margin: 10px auto 0
+
+      +tablet
+        width: 300px
+
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -60,10 +75,13 @@
   > h3
     color: $beige
     font-family: 'UniversLT-Condensed', sans-serif
-    font-size: 1.3em
+    font-size: 1.1sem
     letter-spacing: 0.08em
     line-height: 1.4em
     text-align: center
+
+    +tablet
+      font-size: 1.3em
 
   .step
     border-style: dotted
@@ -96,18 +114,25 @@
   h3
     font-family: 'UniversLT-CondensedBold', sans-serif
     color: $beige
-    font-size: 1.8em
+    font-size: 1.2em
     letter-spacing: 0.04em
-    line-height: 1em
+    line-height: 1.2em
     text-transform: uppercase
     text-align: center
+
+    +tablet
+      font-size: 1.8em
 
   p
     font-family: 'UniversLT-Condensed', sans-serif
     color: $beige
-    font-size: 1.3em
+    font-size: 1em
     letter-spacing: 0.08em
     line-height: 1.4em
     text-align: center
+
+    +tablet
+      font-size: 1.3em
+
 
 

@@ -1,0 +1,148 @@
+/*  _navmenupopup.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.menu-popup
+  opacity: 0
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: -1
+  transition: 0.3s opacity
+
+.menu-wrapper
+  padding: 38px 20px
+
+  +tablet
+    padding: 40px
+
+  .menu-toggle
+    margin-bottom: 20px
+
+    +tablet
+      margin-bottom: 60px
+
+  svg
+    display: block
+    height: 35px
+    margin: 10px auto
+    stroke: $gold
+
+    +tablet
+      margin: 20px auto
+      height: 62px
+
+    path
+      transition: 0.3s stroke
+
+    &:hover
+      path 
+        stroke: $gold
+
+  .p-shop
+    width: 84px
+    margin: 0 auto
+
+    +tablet
+      width: 148px
+
+  .p-our-story
+    width: 178px
+    margin: 0 auto
+
+    +tablet
+      width: 314px
+
+  .p-learn
+    width: 102px
+    margin: 0 auto
+
+    +tablet
+      width: 181px
+
+  .p-tips
+    width: 70px
+    margin: 0 auto
+
+    +tablet
+      width: 124px
+
+  .p-wholesale
+    width: 193px
+    margin: 0 auto
+
+    +tablet
+      width: 342px
+
+  .p-press
+    width: 101px
+    margin: 0 auto
+
+    +tablet
+      width: 180px
+
+  .bottom-row
+    +flex
+    width: 150px
+    margin: 20px auto
+
+    +tablet
+      width: 250px
+
+    svg
+      display: block
+      width: 40px
+      height: 40px
+
+      +tablet
+        height: 82px
+        width: 80px
+
+    h3, h3 a
+      align-self: center
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.menu-popup
+  // display: none
+  background-color: rgba(51, 51, 51, 0.95)
+  border-top: 35px solid $beige
+
+  +tablet
+    border-top: 35px solid $beige
+
+  .menu-toggle
+    font-family: 'Copperplate-Med', sans-serif
+    text-transform: uppercase
+    font-size: 10px
+    letter-spacing: 0.15em
+    color: $white   
+    transition: 0.3s color
+
+    +tablet
+      font-size: 18px
+
+    &:hover
+      color: $gold
+
+  .bottom-row
+    h3, h3 a
+      font-family: 'Copperplate-Med', sans-serif
+      text-transform: uppercase
+      font-size: 0.85em
+      letter-spacing: 0.15em
+      color: $white
+      transition: 0.3s color
+
+      +tablet
+        font-size: 1em
+
+      &:hover
+        color: $gold

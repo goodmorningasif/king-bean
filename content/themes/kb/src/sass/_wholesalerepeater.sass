@@ -7,36 +7,49 @@
 .wholesale-repeater
 
   .repeater
-    margin-bottom: 200px
     z-index: 50
 
+    +tablet
+      margin-bottom: 200px
+
     h3
-      margin: 60px auto 40px
+      margin: 20px auto 20px
+
+      +tablet
+        margin: 60px auto
 
     &:after
-      content: " "
-      padding-top: 500px
-      padding-left: 500px
-      position: relative
-      bottom: -400px
-      left: calc(50% - 250px)
+
+      +tablet
+        content: " "
+        padding-top: 500px
+        padding-left: 500px
+        position: relative
+        bottom: -400px
+        left: calc(50% - 250px)
 
   .repeater:nth-child(odd)
     position: relative
 
     .image
-      order: 1
+      +tablet
+        order: 1
     .copy
-      order: 2
+      +tablet
+        order: 2
 
   .repeater:nth-child(even)
+
     .image
-      order: 2
+      +tablet
+        order: 2
     .copy
-      order: 1
+      +tablet
+        order: 1
 
   .repeater:last-child
     margin-bottom: 100px
+
     &:after
       padding-top: 0
       padding-left: 0
@@ -55,14 +68,26 @@
       width: 960px
 
   .image, .copy
-    flex: 0 0 50%
+    flex: 0 0 100%
+    margin-bottom: 30px
+
+    +tablet
+      flex: 0 0 50%
+
+  .copy 
+    p
+      +tablet
+        width: 370px
 
   .image
     +img($c: contain)
-    height: 250px
+    height: 140px
     align-self: center
     position: relative
     z-index: 100
+
+    +tablet
+      height: 250px
 
 
 /* OBJECTS -> For styling objects */
@@ -86,9 +111,12 @@
     .copy
       color: $beige
       font-family: 'UniversLT-Condensed', sans-serif
-      font-size: 1.1em
+      font-size: 0.8em
       letter-spacing: 0.08em
       line-height: 1.4em
+
+      +tablet
+        font-size: 1.1em
 
   .repeater:nth-child(odd)
 

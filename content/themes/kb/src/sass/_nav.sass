@@ -11,7 +11,6 @@ nav
 .special-offer
   width: 100vw
   height: 35px
-  background-color: $beige
   padding-top: 12px
 
 .navigation
@@ -32,7 +31,12 @@ nav
 
   .menu-toggle
     flex: 0 0 50px
-    margin-top: 15px
+    margin-top: 8px
+    position: relative
+    z-index 200
+
+    +tablet
+      margin-top: 15px
 
     +tablet
       flex: 0 0 70px
@@ -40,14 +44,14 @@ nav
 
   .brand-logo
     flex: 0 0 auto
-    > svg
+    svg
       width: 140px
       height: 28px
       margin: 5px auto
 
       +tablet
         width: 300px
-        height: 40px
+        height: 60px
 
   .shop-link
     flex: 0 0 50px
@@ -63,10 +67,8 @@ nav
         height: 53px
         margin-top: 0
 
-
     +tablet
       flex: 0 0 70px
-
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -74,21 +76,29 @@ nav
 
 .special-offer
   font-family: 'UniversLT-Condensed', sans-serif
-  font-size: 0.65em
+  font-size: 0.65em  
+  background-color: $beige
   color: $white
   letter-spacing: 0.1em
   text-transform: uppercase
   text-align: center
 
-.menu-toggle
+.menu-toggle a
   font-family: 'Copperplate-Med', sans-serif
   text-transform: uppercase
-  font-size: 0.7em
+  font-size: 10px
   letter-spacing: 0.15em
   color: $beige
+  transition: 0.3s color
 
   +tablet
-    font-size: 0.9em
+    font-size: 18px
+
+  &:hover
+    color: $gold
+
+  +tablet
+    font-size: 18px
 
 .toggle-white
   .menu-toggle

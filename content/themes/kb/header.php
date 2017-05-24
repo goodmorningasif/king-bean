@@ -35,3 +35,7 @@
 <nav>
   <?php get_template_part('/components/nav/nav'); ?>
 </nav>
+
+<section class="menu-popup">
+	<?php get_template_part('/components/nav/menu-popup'); ?>
+</section>

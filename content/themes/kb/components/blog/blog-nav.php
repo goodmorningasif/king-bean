@@ -10,8 +10,8 @@
 	  <?php $cats = get_categories(); 
 	    foreach( $cats as &$cat ) : ?>
 	    <li>
-	      <a href="<?php echo $cat->slug; ?>">
-	        <?php echo $cat->name; ?>
+	      <a href="http://<?php echo $GLOBALS['root'].'/category/'.$cat->slug; ?>">
+	        <?php echo $cat->name; ?> 
 	      </a>
 	    </li>
 	    <?php endforeach; ?>
