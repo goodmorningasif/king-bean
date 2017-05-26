@@ -16,7 +16,8 @@
 </div>
 <div class="people">
 	<?php $count = 0;
-	  if ( have_rows('st_people') ) : while ( have_rows('st_people') ) : the_row();  ?>
+	  if ( have_rows('st_people') ) : 
+	  	while ( have_rows('st_people') ) : the_row();  ?>
 		<div class="person id-<?php echo $count; ?>">
 		  <div class="name-title">
   		  <h3>

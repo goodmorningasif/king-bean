@@ -16,18 +16,21 @@ nav
 .navigation
   +flex
   width: 100vw
-  height: 100px
+  height: 120px
   position: fixed
-  top: 55px
+  top: 0
   left: 0
   padding-left: 20px
   padding-right: 20px
+  padding-top: 55px
 
   +tablet
-    top: 65px
+    height: 165px
     left: calc(50% - 50vw)
     padding-right: 40px
     padding-left: 40px
+    padding-top: 65px
+    top: 0
 
   .menu-toggle
     flex: 0 0 50px
@@ -51,28 +54,34 @@ nav
 
       +tablet
         width: 300px
-        height: 60px
+        height: 45px
 
   .shop-link
     flex: 0 0 50px
     text-align: right
 
-    > svg
-      width: 20px
-      height: 28px
-      margin-top: 5px
-
-      +tablet
-        width: 38px
-        height: 53px
-        margin-top: 0
-
     +tablet
       flex: 0 0 70px
+
+    a 
+      > svg
+        width: 20px
+        height: 28px
+        margin-top: 5px
+
+        +tablet
+          width: 38px
+          height: 53px
+          margin-top: 0
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
+
+.navigation
+  background-color: transparent
+  transition: 0.4s background-color ease
+  
 
 .special-offer
   font-family: 'UniversLT-Condensed', sans-serif
@@ -89,6 +98,7 @@ nav
   font-size: 10px
   letter-spacing: 0.15em
   color: $beige
+  cursor: pointer
   transition: 0.3s color
 
   +tablet
@@ -98,13 +108,40 @@ nav
     color: $gold
 
   +tablet
-    font-size: 18px
+    font-size: 18px 
 
-.toggle-white
-  .menu-toggle
+.brand-logo
+  .kb-logo-text-cls-1
+    transition: 0.3s fill
+
+  &:hover
+    .kb-logo-text-cls-1
+      fill: $gold
+      
+
+.shop-link
+  .kb-seal-cls-2
+    transition: 0.3s fill
+
+  &:hover
+    .kb-seal-cls-2
+      fill: $beige
+
+.opaque
+  background-color: $white
+  transition: 0.4s background-color ease
+
+.white 
+  .menu-toggle a
     color: $white
+
+    &:hover
+      color: $gold
 
   .kb-logo-text-cls-1
     fill: $white
 
-
+  .brand-logo
+    &:hover
+      .kb-logo-text-cls-1
+        fill: $gold

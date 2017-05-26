@@ -27,21 +27,25 @@
     color: $gold
     font-family: 'DINEngschriftStd', sans-serif
     font-size: 1.1em
-    letter-spacing: 0.08em
+    letter-spacing: 0.045em
     line-height: 1.2em
     text-transform: uppercase
     text-align: center
 
     +tablet
-      font-size: 1.8emß
+      font-size: 1.8em
 
   p
     color: $beige
     font-family: 'UniversLT-Condensed', sans-serif
     font-size: 1.1em
-    letter-spacing: 0.08em
+    letter-spacing: 0.045em
     line-height: 1.4em
     text-align: center
 
     > a
       color: $beige
+      transition: 0.3s color
+
+      &:hover
+        color: $gold

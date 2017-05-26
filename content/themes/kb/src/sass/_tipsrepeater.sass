@@ -5,7 +5,7 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 .tipsrepeater
-  margin: 100px auto
+  margin: 150px auto
   width: 80%
   position: relative
 
@@ -40,6 +40,7 @@
       +tablet
         padding-left: 40px
         padding-top: 40px
+        
     &:before
       left: calc(50% - 160px) 
 
@@ -52,21 +53,24 @@
       +tablet
         right: calc(50% - 205px)
 
+
 .tips-box
   margin: 75px auto 0
 
-
-// Select Odd Children
-.tip-single:nth-child(2n-1)
+.tip-single /* all element */
   position: relative
+
+  &:before
+    content: " "
+    position: absolute    
+
+.tip-single:nth-child(2n-1) /* ever odd element */
   padding: 40px 10px
 
   +tablet
     padding: 50px
 
   &:before
-    content: " "
-    position: absolute
     width: 60px
     height: 40px
     top: -30px
@@ -75,14 +79,17 @@
   h3
     margin-top: 30px
 
-  p 
-    margin-top: 20px
-
-// Select Even Children
-.tip-single:nth-child(2n)
+.tip-single:nth-child(2n) /* every even element */
   +flex
-  position: relative
   padding-bottom: 80px
+  margin-top: 30px
+
+  &:before
+    +tablet
+      width: 335px
+      height: 92px
+      top: -10px
+      left: calc(50% - 256px) 
 
   +tablet
     padding: 80px
@@ -95,6 +102,14 @@
 
   .right
     flex: 0 0 100%
+    
+    &:after
+      +tablet
+        content: " "
+        position: absolute
+        width: 2px
+        height: 190px
+        bottom: -220px
 
     +tablet
       flex: 0 0 55%
@@ -118,20 +133,8 @@
   p
     margin-top: 40px
 
-// Select every other Even Children starting at 2
-.tip-single:nth-child(4n-2)
-  margin-top: 30px
 
-  &:before
-
-    +tablet
-      content: " "
-      position: absolute
-      width: 335px
-      height: 92px
-      top: -10px
-      left: calc(50% - 256px) 
-
+.tip-single:nth-child(4n-2) /* elements 2, 6, 10 */
   .left
     +tablet
       padding-left: 40px
@@ -143,31 +146,11 @@
       position: relative
 
     &:after
-
       +tablet
-        content: " "
-        position: absolute
-        width: 2px
-        height: 190px
-        bottom: -220px
         left: calc(50% - 80px) 
 
 
-
-// Select every other Even Children starting at 4
-.tip-single:nth-child(4n)
-  margin-top: 30px
-
-  &:before
-
-    +tablet
-      content: " "
-      position: absolute
-      width: 335px
-      height: 92px
-      top: -10px
-      left: calc(50% - 256px) 
-
+.tip-single:nth-child(4n)  /* elements 4, 8 */
   .left
     +tablet
       order: 2
@@ -179,17 +162,11 @@
       position: relative
 
     &:after
-
       +tablet
-        content: " "
-        position: absolute
-        width: 2px
-        height: 190px
-        bottom: -220px
         right: 120px 
 
-.tip-single:last-child
 
+.tip-single:last-child /* last element */
   .right    
     &:after
       display: none
@@ -213,10 +190,37 @@
     &:before, &:after
       background-color: $white
 
-  .tip-single
+.tip-single /* all elements */
+  .heading-1
+    font-family: 'Copperplate-Med', sans-serif
+    font-size: 1em
+    color: $gold
+    letter-spacing: 0.15em
+    line-height: 1.4em
+    text-align: center
+    text-transform: uppercase
+  
+  .heading-2
+    font-family: 'DINEngschriftStd', sans-serif
+    line-height: 1.3em
+    letter-spacing: 0.045em
+    text-transform: uppercase
+    text-align: center
 
-// Select Odd Children
-.tip-single:nth-child(2n-1)
+  h3
+    letter-spacing: 0.045em
+    line-height: 1.3em
+    text-transform: uppercase
+
+  p 
+    font-family: 'UniversLT-Condensed', sans-serif
+    color: $beige
+    font-size: 1.15em
+    letter-spacing: 0.05em
+    line-height: 1.5em
+
+
+.tip-single:nth-child(2n-1) /* ever odd element */
   border-style: dotted
   border-width: 6px
   border-image: url('../assets/svg/dots.svg') 33.33% round
@@ -228,109 +232,56 @@
 
   &:after
     +img($c: contain)
-    background-color: $white
     background-image: url('../assets/svg/tips-rtl.svg')
 
-  .heading-1
-    font-family: 'Copperplate-Med', sans-serif
-    font-size: 1em
-    color: $gold
-    letter-spacing: 0.15em
-    line-height: 1.4em
-    text-align: center
-    text-transform: uppercase
-
   .heading-2
-    font-family: 'DINEngschriftStd', sans-serif
     font-size: 3em
     color: $gold
-    letter-spacing: 0.08em
-    line-height: 1.2em
-    text-align: center
-    text-transform: uppercase
 
   h3
     font-family: 'UniversLT-CondensedBold', sans-serif
     color: $beige
     font-size: 1.8em
-    letter-spacing: 0.04em
-    line-height: 1em
-    text-transform: uppercase
     text-align: center
 
   p
-    font-family: 'UniversLT-Condensed', sans-serif
-    color: $beige
-    font-size: 1.15em
-    letter-spacing: 0.04em
-    line-height: 1.4em
     text-align: center
 
-// Select Even Children
-.tip-single:nth-child(2n)
-  
+
+.tip-single:nth-child(2n) /* every even element */
   .heading-2
     +img($c: contain)
     background-image: url('../assets/svg/banner.svg')
-    font-family: 'DINEngschriftStd', sans-serif
     font-size: 2.7em
     color: $white
-    letter-spacing: 0.08em
-    line-height: 1.2em
-    text-align: center
-    text-transform: uppercase
 
   h3
     font-family: 'DINEngschriftStd', sans-serif
     color: $gold
     font-size: 3em
-    letter-spacing: 0.04em
-    line-height: 1.2em
-    text-transform: uppercase
     text-align: left   
 
-  p 
-    font-family: 'UniversLT-Condensed', sans-serif
-    color: $beige
-    font-size: 1.12em
-    letter-spacing: 0.04em
-    line-height: 1.4em
+  .right
+    &:after
+      +img($c: contain)
+      background-image: url('../assets/svg/tips-down.svg')
 
-// Select every other Even Children starting at 2
-.tip-single:nth-child(4n-2)
 
+.tip-single:nth-child(4n-2) /* elements 2, 6, 10 */
   &:before
     +img($c: contain)
-    background-color: $white
     background-image: url('../assets/svg/tips-rtl.svg') 
 
   p
     text-align: left
-  
-  .right
-
-    &:after
-      +img($c: contain)
-      background-color: $white
-      background-image: url('../assets/svg/tips-down.svg')
 
 
-// Select every other Even Children starting at 4
-.tip-single:nth-child(4n)
-
+.tip-single:nth-child(4n) /* elements 4, 8 */
   &:before
     +img($c: contain)
-    background-color: $white
     background-image: url('../assets/svg/tips-ltr.svg')
 
   p
     +tablet
       text-align: right
-
-  .right
-
-    &:after
-      +img($c: contain)
-      background-color: $white
-      background-image: url('../assets/svg/tips-down.svg')
 

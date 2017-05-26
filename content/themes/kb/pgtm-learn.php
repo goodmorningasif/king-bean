@@ -14,31 +14,34 @@
 
   get_header(); ?>
 
-  <!-- ==== SECTION -> HEAD ==== -->
-  <?php $image = get_field('bn_image'); ?>
-  <section class="learn-head" 
-    style="background-image: url(<?php echo $image['url']; ?>)">
-    <?php get_template_part('/components/learn/head'); ?>
-  </section>
+<!-- ==== SECTION -> LEARN HEAD ==== -->
+<?php $image = get_field('bn_image'); ?>
+<section class="learn-head feature" 
+  style="background-image: url(<?php echo $image['url']; ?>)">
+  <?php get_template_part('/components/learn/head'); ?>
+</section>
 
-  <!-- ==== SECTION -> INNER NAV ==== -->
-  <div class="learn-nav">
-    <?php get_template_part('/components/learn/inner-nav'); ?>
-  </div>  
+<!-- ==== SECTION -> INNER NAV ==== -->
+<div class="learn-nav">
+  <?php get_template_part('/components/learn/inner-nav'); ?>
+</div>  
 
-	<!-- ==== SECTION -> STORY ==== -->
-  <section class="story" id="link-story">
-    <?php get_template_part('/components/learn/story'); ?>
-  </section>
+<!-- ==== SECTION -> STORY ==== -->
+<a class="anchor" id="link-story"></a>
+<section class="story" >
+  <?php get_template_part('/components/learn/story'); ?>
+</section>
 
-	<!-- ==== SECTION -> ROASTER ==== -->
-  <section class="roaster" id="link-roaster">
-    <?php get_template_part('/components/learn/roaster'); ?>
-  </section>
+<!-- ==== SECTION -> ROASTER ==== -->
+<a class="anchor" id="link-roaster"></a>
+<section class="roaster" >
+  <?php get_template_part('/components/learn/roaster'); ?>
+</section>
 
-	<!-- ==== SECTION -> STOCKIST ==== -->
-  <section class="stockist" id="link-stockist">
-    <?php get_template_part('/components/learn/stockist'); ?>
-  </section>
+<!-- ==== SECTION -> STOCKIST ==== -->
+<a class="anchor" id="link-stockist"></a>
+<section class="stockist" >
+  <?php get_template_part('/components/learn/stockist'); ?>
+</section>
 
-  <?php get_footer();
+<?php get_footer();

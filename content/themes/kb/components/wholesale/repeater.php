@@ -8,8 +8,10 @@
     $title_id = str_replace(' ', '-', $title); 
     $image = get_sub_field('wh_content-image'); ?>
 
-    <div class="repeater" 
+    <a class="anchor" 
       id="link-<?php echo $title_id; ?>">
+    </a>
+    <div class="repeater">
       <h3>
         <?php echo $title; ?>
       </h3>

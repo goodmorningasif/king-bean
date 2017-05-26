@@ -1,0 +1,169 @@
+/*  _navmenupopup.sass */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.newsletter-popup
+  position: relative
+  z-index: -1
+  opacity: 0
+  transition: 1s opacity ease
+  transition-delay: 1s
+
+  .overlay
+    position: fixed
+
+.newsletter-wrapper
+  position: fixed
+  width: 96vw
+  height: 96vh
+  top: 2vh
+  left: 2vw
+  padding: 20px
+  z-index: 600
+
+  +tablet
+    top: calc(50vh - 175px)
+    left: calc(50vw - 275px)
+    width: 550px
+    height: 400px
+
+.newsletter-container
+  height: 100%
+  width: 100%
+  border-top: 4px solid $gold
+  border-bottom: 4px solid $gold
+
+  .newsletter-toggle
+    padding-top: 8px
+    padding-right: 5px
+
+  .logo
+    width: 60px
+    height: 60px
+    margin: 0 auto
+
+  h3
+    margin-top: 20px
+
+.popup-form
+  .form-email
+    height: 40px
+    width: 100%
+    padding-left: 25px
+
+  .contain-input
+    position: relative
+    width: 250px
+    height: 40px
+    padding-left: 25px
+    margin: 30px auto
+
+    +tablet
+      width: 350px
+
+    &:before, &:after
+      position: absolute
+      top: 0
+      padding-left: 40px
+      padding-top: 40px
+      transform: rotate(45deg)
+
+    &:before
+      left: -12px
+
+    &:after
+      right: -12.5px
+
+  .form-submit
+    display: block
+    margin: 20px auto 15px
+
+.newsletter-opacity
+  opacity: 1
+  z-index: 900
+
+.success 
+  margin-top: 30px
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+.newsletter-popup
+
+.newsletter-wrapper
+  background-color: $white
+
+  .newsletter-toggle
+    font-family: 'Copperplate-Bol', sans-serif
+    color: $gold
+    cursor: pointer
+    font-size: 1.2em
+    letter-spacing: 0.15em
+    text-transform: uppercase
+    text-align: right
+    transition: 0.3s color
+
+    &:hover
+      color: $beige
+
+  h3
+    color: $gold
+    font-family: 'DINEngschriftStd', sans-serif
+    font-size: 2.1em
+    letter-spacing: 0.045em
+    line-height: 1.2em
+    text-transform: uppercase
+    text-align: center
+
+    +tablet
+      font-size: 2.7em
+
+  p
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 1em
+    letter-spacing: 0.045em
+    line-height: 1.3em
+    color: $beige
+    text-align: center
+
+.popup-form
+  font-family: 'UniversLT-Condensed', sans-serif
+  
+  .form-email, .form-submit
+    background-color: transparent
+    border: none
+
+  .form-submit
+    font-family: 'UniversLT-Condensed', sans-serif
+    font-size: 0.9em
+    color: $beige
+    cursor: pointer
+    letter-spacing: 0.045em
+    text-transform: uppercase
+    text-align: center
+    transition: 0.3s color
+
+    &:hover
+      color: $gold
+
+  .form-email
+    font-family: 'UniversLT-Condensed', sans-serif
+    color: $beige
+    font-size: 0.7em
+    letter-spacing: 0.045em
+
+    +placeholder
+      font-family: 'UniversLT-Condensed', sans-serif
+      color: $beige
+      font-size: 1em
+      letter-spacing: 0.045em
+
+  .contain-input
+    background-color: $litepink
+
+    &:before, &:after
+      content: " "
+      background-color: $white

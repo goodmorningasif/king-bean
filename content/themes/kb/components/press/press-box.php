@@ -15,29 +15,12 @@
 
   $press = new WP_Query( $args_sticky );
 
-  if ( $press->have_posts() ) : while( $press->have_posts() ) : $press->the_post(); 
-    $image = get_field('press_image'); ?>
+  if ( $press->have_posts() ) : 
+    while( $press->have_posts() ) : 
+      $press->the_post(); 
 
-    <div class="press-clipping">
-      <div class="date">
-        <?php echo get_the_date('M Y'); ?>
-      </div>
-      <div class="image" 
-        style="background-image: url(<?php echo $image['url']; ?>)">
-        </div>
-      <p>
-        <?php echo get_the_content(); ?>
-      </p>
-      <h3>
-        <?php echo get_the_title(); ?>
-      </h3>
-      <a class="read-more" target="_blank"
-        href="<?php echo get_field('press_ctl'); ?>" >
-        Read More
-      </a>
-    </div>
+      get_template_part('components/press/press-content');
 
-  <?php 
     endwhile;endif; wp_reset_postdata();
 
     // Remaining Press Post Query
@@ -52,27 +35,11 @@
 
     $press = new WP_Query( $args_nosticky );
 
+    if ( $press->have_posts() ) : 
+      while( $press->have_posts() ) : 
+        $press->the_post();
 
-    if ( $press->have_posts() ) : while( $press->have_posts() ) : $press->the_post(); 
-    $image = get_field('press_image'); ?>
+        get_template_part('components/press/press-content');
 
-    <div class="press-clipping">
-      <div class="date">
-        <?php echo get_the_date('M Y'); ?>
-      </div>
-      <div class="image" 
-        style="background-image: url(<?php echo $image['url']; ?>)">
-        </div>
-      <p>
-        <?php echo get_the_content(); ?>
-      </p>
-      <h3>
-        <?php echo get_the_title(); ?>
-      </h3>
-      <a class="read-more" target="_blank"
-        href="<?php echo get_field('press_ctl'); ?>" >
-        Read More
-      </a>
-    </div>
-
-<?php endwhile;endif; wp_reset_postdata(); ?>
+    endwhile;endif; 
+    wp_reset_postdata(); ?>

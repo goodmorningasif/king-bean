@@ -7,13 +7,8 @@
 <div class="menu-wrapper">
   <h3 class="menu-toggle">Close</h3>
   <div class="p-shop">
-		<a href="http://<?php echo $GLOBALS['root']; ?>/shop">
+		<a href="https://www.kingbean.com/collections/all">
 			<?php echo file_get_contents($GLOBALS['url'].'/assets/svg/shop.svg'); ?>	
-		</a>
-	</div>
-	  <div class="p-our-story">
-		<a href="http://<?php echo $GLOBALS['root']; ?>/our-story">
-			<?php echo file_get_contents($GLOBALS['url'].'/assets/svg/our-story.svg'); ?>	
 		</a>
 	</div>
 	<div class="p-learn">

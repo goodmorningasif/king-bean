@@ -15,14 +15,28 @@
     flex: 0 0 100%
     margin-bottom: 20px
 
-    +tablet
+
+    @media(min-width: #{$break-large})
       flex: 0 0 33.33%
       margin-bottom: 0
+
+      &:hover
+        .image
+          opacity: 0.2
+
+        h3
+          margin-top: -250px    
 
     .image 
       width: 280px
       height: 510px
       margin: 0 auto
+      opacity: 1
+      transition: 0.5s opacity ease
+
+    h3
+      margin-top: 0
+      transition: 0.4s margin
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -32,6 +46,7 @@
 
 .product-wrapper
   .single-product
+
     .image
       +img
       

@@ -15,6 +15,6 @@
 </div>
 <div class="bottom">
   <p>&copy;<?php echo date ('Y'); ?> king bean coffee</p>
-  <p>Designed by <a href="http://www.sdcopartners.com" target="_blank">Stitch Design Co.</a></p>
+  <p>Designed by <a href="http://www.sdcopartners.com" target="_blank">SDCO Partners</a></p>
   </p>
 </div>

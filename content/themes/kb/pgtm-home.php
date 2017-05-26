@@ -13,24 +13,24 @@
   
   get_header(); ?>
 
-<!-- ==== SECTION -> HEAD ==== -->
+<!-- ==== SECTION -> HOME HEAD ==== -->
 <?php $image = get_field('main_image'); ?>
-<section class="home-head" 
+<section class="home-head feature" 
   style="background-image: url(<?php echo $image['url']; ?>)">
   <?php get_template_part('/components/home/head'); ?>
 </section>
 
-<!-- ==== SECTION -> Feature Products ==== -->
+<!-- ==== SECTION -> FEATURE PRODUCTS ==== -->
 <section class="feature-products">
   <?php get_template_part('/components/home/feature-products'); ?>
 </section>
 
-<!-- ==== SECTION -> Tagline ==== -->
+<!-- ==== SECTION -> TAGLINE ==== -->
 <section class="tagline">
   <?php get_template_part('/components/home/tagline'); ?>
 </section>
 
-<!-- ==== SECTION -> Links ==== -->
+<!-- ==== SECTION -> LINKS ==== -->
 <section class="home-links">
   <?php get_template_part('/components/home/links'); ?>
 </section>

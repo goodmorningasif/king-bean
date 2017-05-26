@@ -63,7 +63,7 @@ footer
   .col1 .bottom, .col2 .bottom
     padding-top: 20px
  
-form
+.foot-form
   .form-email
     height: 30px
     width: 190px
@@ -101,6 +101,13 @@ form
     height: 25px
     margin-right: 15px
 
+    .cls-1
+      transition: 0.3s fill
+
+    &:hover
+      .cls-1
+        fill: $white
+
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -119,6 +126,11 @@ footer
 
   .col1 p, .col1 p a, .col2 p, .col2 p a, 
     color: $white
+    transition: 0.3s color
+
+    &:hover
+      color: $gold
+
   
   .col1 h3, .col2 h3
     color: $gold
@@ -135,7 +147,7 @@ footer
     p, p a
       color: $gold
   
-form
+.foot-form
   font-family: 'UniversLT-Condensed', sans-serif
   
   .form-email, .form-submit
@@ -147,6 +159,10 @@ form
     color: $white
     letter-spacing: 0.07em
     text-transform: uppercase
+    transition: 0.3s color
+
+    &:hover
+      color: $gold
 
   .form-email
     font-family: 'UniversLT-Condensed', sans-serif

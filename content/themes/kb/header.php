@@ -39,3 +39,7 @@
 <section class="menu-popup">
 	<?php get_template_part('/components/nav/menu-popup'); ?>
 </section>
+
+<section class="newsletter-popup">
+	<?php get_template_part('/components/nav/newsletter-popup'); ?>
+</section>
