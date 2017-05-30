@@ -5,7 +5,7 @@
 ?>
 
 <div class="top">
-  <h3>general inquries</h3>
+  <h3>general inquiries</h3>
   <?php if ( have_rows( 'foot_g-inq', 'option' ) ) : while ( have_rows( 'foot_g-inq', 'option' ) ) : the_row(); 
     if ( get_row_layout() === 'tele-true' ) : 
       $tele = get_sub_field('foot_g-inq-tel'); ?>

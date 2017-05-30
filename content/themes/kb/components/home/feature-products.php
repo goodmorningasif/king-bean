@@ -23,7 +23,7 @@
 					<div class="price">
 						<?php echo get_sub_field('fp_price'); ?>
 					</div>
-			</a>
+			    </a>
 				</div>
 	<?php endwhile;endif; ?>	
 </div>
