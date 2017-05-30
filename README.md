@@ -1,4 +1,4 @@
-# []
+# KING BEAN
 Copyright 2017 SDCO Partners
 
 1. Getting Started 
@@ -24,7 +24,7 @@ Copyright 2017 SDCO Partners
 ### Folder Structer
 
 ```
-|--/[INIT]/
+|--/king-bean/
 |  |
 |  |--/assets/
 |  |
@@ -169,7 +169,38 @@ For All other files ...
   * Git commit and git push to server
 
 ### Feature Documentation
+King Bean is relatively bare-bones site with not a lot going on in it's feature department. The exception is the navigation controller, an email submission confirmation script, and a couple of functions that handle creating and reading cookies.
 
+#### Navigation
+The default navigation bar is a fixed bar with a background. However, on certain pages with a feature image the background is transparent and the text color is white. This is handled mainly by the css style `newsletter-opacity`. Even the animation is handled by native css properties. The javascript navigation controller adds the style `newsletter-opacity` if the current page has a feature image, and removes it if the scroll position is below the feature image. 
+
+
+#### Cookies
+`cookie.js` handles creating, reading, and deleting cookies. The newsletter popup looks for a specific cookie to determine whether it should display or not.
+
+
+#### Submission Confirmation 
+Upon email submission, the email script will remove the form fields and inject text. 
+
+
+
+## Dev Environment
+The overall goal with the site's architecture is to continually break down files into smaller components. Our Gulp config file helps stitch those components together. Abstract out functions when possible. Observer DRY.
+
+### GULP Config
+The gulp config file primarily compiles the sass files and javascript files into `styles.css` and `scripts.js` and places them in the `prod` folder. It also watches the files for changes and triggers Live Reload, prints scripting errors out to the command line, minifies the css and javascript files, and can run a check for modernizr.js if you enable it.
+
+### SASS
+Sass files are broken down into modules to makeit easier to find the styles you need to edit. The primary gateway is the file `styles.sass`, which is where all other sass files are imported into. `_reset.sass` resets the base css styles. `_variables.sass`, and `_mixins.sass` contain global styles used across all pages. The remaining sass files are broken into styles for positioning and styles for styling. See instructions inside those files for more details. 
+
+### Javascript
+All js files are broken into feature-based files. `a.js` is the first file compiled, so if you need to declare a function before all others do it here. `a,js` is also where document.ready is declared. Don't write entire functions here; instead, write a separate file then invoke that function within document.ready.
+
+### Components & Subcomponents
+Each php page is broken down into components. Each component can be broken down into further sub-components. The folder structure here is reflected in the SASS structure.
+
+### Functions.php
+For most Wordpress Developers, Functions.php can become a catch-all bag for all PHP scropts. We should probably break down functions into a scripts folder like our javascript. This will be included in projects moving forward.
 
 ## Known Bugs
 
