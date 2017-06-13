@@ -28,7 +28,7 @@
         bottom: -400px
         left: calc(50% - 250px)
 
-  .repeater:nth-child(odd)
+  .repeater:nth-of-type(2n -1)
     position: relative
 
     .image
@@ -38,7 +38,7 @@
       +tablet
         order: 2
 
-  .repeater:nth-child(even)
+  .repeater:nth-of-type(2n)
 
     .image
       +tablet
