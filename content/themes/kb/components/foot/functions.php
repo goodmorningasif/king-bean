@@ -16,7 +16,7 @@
 
   /* Define Variables  */
   $GLOBALS['url'] = get_template_directory_uri();
-  $GLOBALS['root'] = '10.1.10.96/king-bean';
+  $GLOBALS['root'] = '50.28.54.252/~kingbean';
   $GLOBALS['docpath'] = $_SERVER['DOCUMENT_ROOT'].'/king-bean';
 
   /* Add Styles, Fonts, and Javascript */
@@ -105,10 +105,9 @@
     $string = array();
     $is_one = $input[0] === '1';
     $string[0] = $is_one ? mb_substr($input, 0, 4) : mb_substr($input, 0, 3);
-    $string[1] = $is_one ? mb_substr($input, 4, 3) : mb_substr($input, 3, 3);
+    $string[1] = $is_one ? mb_substr($input, 3, 3) : mb_substr($input, 2, 3);
     $string[2] = $is_one ? mb_substr($input, 7) : mb_substr($input, 6);
     $output = $string[0] . '.' . $string[1] . '.' . $string[2];
-    
     return $output;
   }
 
