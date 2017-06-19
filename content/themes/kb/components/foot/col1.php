@@ -16,7 +16,7 @@
       </p>
     <?php elseif ( get_row_layout() === 'email-true' ) : ?>
       <p>
-        <a href="mailto:<?php echo $tele; ?>" target="_blank">
+        <a href="mailto:<?php echo get_sub_field('foot_g-inq-email');  ?>" target="_blank">
           <?php echo get_sub_field('foot_g-inq-email'); ?>
         </a>
       </p>          
@@ -35,7 +35,7 @@
       </p>
     <?php elseif ( get_row_layout() === 'e-email-true' ) : ?>
       <p>
-        <a href="mailto:<?php echo $tele; ?>" target="_blank">
+        <a href="mailto:<?php echo get_sub_field('foot_ec-inq-email'); ?>" target="_blank">
           <?php echo get_sub_field('foot_ec-inq-email'); ?>
         </a>
       </p>          

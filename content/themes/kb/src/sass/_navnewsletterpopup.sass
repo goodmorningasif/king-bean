@@ -24,10 +24,10 @@
   z-index: 600
 
   +tablet
-    top: calc(50vh - 175px)
+    top: calc(50vh - 220px)
     left: calc(50vw - 275px)
     width: 550px
-    height: 400px
+    height: 440px
 
 .newsletter-container
   height: 100%
@@ -47,45 +47,58 @@
   h3
     margin-top: 20px
 
-.popup-form
-  .form-email
-    height: 40px
-    width: 100%
-    padding-left: 25px
 
-  .contain-input
-    position: relative
-    width: 250px
-    height: 40px
-    padding-left: 25px
-    margin: 30px auto
+.email-790 .form-email, 
+.form-email, 
+.popup-form .form-email, 
+.wpcf7-form-control-wrap .form-email
+  height: 40px
+  width: 100%
+  padding-left: 45px
 
-    +tablet
-      width: 350px
+.contain-input, 
+.email-790, 
+.popup-form, 
+.wpcf7-form-control-wrap
+  display: block
+  position: relative
+  width: 250px
+  height: 40px
+  margin: 30px auto
 
-    &:before, &:after
-      position: absolute
-      top: 0
-      padding-left: 40px
-      padding-top: 40px
-      transform: rotate(45deg)
+  +tablet
+    width: 350px
 
-    &:before
-      left: -12px
+  &:before, &:after
+    position: absolute
+    top: 0
+    padding-left: 40px
+    padding-top: 40px
+    transform: rotate(45deg)
 
-    &:after
-      right: -12.5px
+  &:before
+    left: -20px
 
-  .form-submit
-    display: block
-    margin: 20px auto 15px
+  &:after
+    right: -20px
+
+.form-submit
+  display: block
+  margin: 20px auto 15px
 
 .newsletter-opacity
   opacity: 1
   z-index: 900
 
-.success 
-  margin-top: 30px
+.success,
+span.wpcf7-not-valid-tip
+  margin-top: 8px
+
+div.wpcf7-validation-errors,
+div.wpcf7-mail-sent-ok
+  border: none
+  margin: 0
+  padding: 0
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
@@ -129,41 +142,63 @@
     color: $beige
     text-align: center
 
-.popup-form
+.popup-form, 
+.wpcf7-form-control-wrap, 
+.email-790
   font-family: 'UniversLT-Condensed', sans-serif
   
-  .form-email, .form-submit
-    background-color: transparent
-    border: none
+.form-email, 
+.form-submit
+  background-color: transparent
+  border: none
 
-  .form-submit
+.form-submit,
+.email-790 .form-email,
+.popup-form .form-email,
+.wpcf7-form-control-wrap .form-email
+  font-family: 'UniversLT-Condensed', sans-serif
+  font-size: 0.9em
+  color: $beige
+  cursor: pointer
+  letter-spacing: 0.045em
+  text-transform: uppercase
+  text-align: center
+  transition: 0.3s color
+
+  &:hover
+    color: $gold
+
+.form-email, 
+.email-790 .form-email, 
+.popup-form .form-email, 
+.wpcf7-form-control-wrap .form-email
+  font-family: 'UniversLT-Condensed', sans-serif
+  color: $beige
+  font-size: 0.7em
+  letter-spacing: 0.045em
+  background-color: $litepink
+  text-align: left
+
+  +placeholder
     font-family: 'UniversLT-Condensed', sans-serif
-    font-size: 0.9em
     color: $beige
-    cursor: pointer
-    letter-spacing: 0.045em
-    text-transform: uppercase
-    text-align: center
-    transition: 0.3s color
-
-    &:hover
-      color: $gold
-
-  .form-email
-    font-family: 'UniversLT-Condensed', sans-serif
-    color: $beige
-    font-size: 0.7em
+    font-size: 1em
     letter-spacing: 0.045em
 
-    +placeholder
-      font-family: 'UniversLT-Condensed', sans-serif
-      color: $beige
-      font-size: 1em
-      letter-spacing: 0.045em
+.contain-input, 
+.email-790, 
+.popup-form, 
+.wpcf7-form-control-wrap
 
-  .contain-input
-    background-color: $litepink
+  &:before, &:after
+    content: " "
+    background-color: $white
 
-    &:before, &:after
-      content: " "
-      background-color: $white
+span.wpcf7-not-valid-tip, 
+div.wpcf7-validation-errors,
+div.wpcf7-mail-sent-ok
+  font-family: 'UniversLT-Condensed', sans-serif
+  color: $gold
+  font-size: 0.9em
+  letter-spacing: 0.045em
+  text-align: center

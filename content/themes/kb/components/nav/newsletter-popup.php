@@ -18,16 +18,7 @@
 		<p>
 		  Recipes, Stories and Special Offers
 		</p>
-	  <form class="popup-form" 
-	    method="post">
-	    <div class="contain-input">
-	      <input class="form-email" 
-	        type="email" name="news-email" 
-	        placeholder="Your email address">
-	    </div>
-	    <input class="form-submit" 
-	      type="submit" name="submit">
-	  </form>
+	  <?php echo do_shortcode('[contact-form-7 id="5" title="King Bean Popup"]'); ?>
 		<p class="form-message">
 		  New emails get free shipping on your first online order
 		</p>

@@ -88,20 +88,21 @@ $j( document ).ready(function(){
 
   /*
   * 
-  *  EMAIL SUBMISSION CONTROLLERS
+  *  EMAIL SUBMISSION CONTROLLERS 
+  *  FOR DEV ENVIRONMENT ONLY
   *
   */
 
   
-  $j('form').submit( function(e) {
-    e.preventDefault();
-    var successMessagePopup = "<p class='success'>Thank you for signing up. We'll be in touch shortly!</p>";
-    var successMessageFooter = "<h3>Thank you for signing up.</h3>";
-    $j('form').remove();
-    $j('.form-message').remove();
-    $j('.newsletter-container').append(successMessagePopup);
-    $j('.col3 .top').append(successMessageFooter);
-  });
+  // $j('form').submit( function(e) {
+  //   e.preventDefault();
+  //   var successMessagePopup = "<p class='success'>Thank you for signing up. We'll be in touch shortly!</p>";
+  //   var successMessageFooter = "<h3>Thank you for signing up.</h3>";
+  //   $j('form').remove();
+  //   $j('.form-message').remove();
+  //   $j('.newsletter-container').append(successMessagePopup);
+  //   $j('.col3 .top').append(successMessageFooter);
+  // });
 
 });
 

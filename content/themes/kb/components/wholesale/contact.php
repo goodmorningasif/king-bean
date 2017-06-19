@@ -15,7 +15,7 @@
 	    </a><br>
     <?php endif;
     if ( get_row_layout() == 'whole-tele-true' ) : ?>
-	  <a href="<?php echo get_sub_field('whole_ec-inq-tel'); ?>">
+	  <a href="tel:<?php echo get_sub_field('whole_ec-inq-tel'); ?>">
 	    <?php echo print_phone('whole_ec-inq-tel'); ?>
 	  </a>
 	<?php endif;endwhile;endif; ?>
