@@ -20,11 +20,34 @@ $break-small: 500px
 
 /* Flexbox */
 
-=flex($a: flex, $b: space-between, $c: flex-start, $d: wrap)
+
+
+=flex($a: flex, $b: space-between, $c: flex-start, $d: wrap, $e: row)
   display: $a
+  display: -webkit-$a
+  display: -moz-$a
+  display: -ms-$a
+  // display: -webkit-box
   justify-content: $b
+  webkit-box-pack: $b
+  -moz-box-pack: $b
+  -webkit-justify-content: $b
+  -ms-flex-pack: $b
   align-items: $c
+  -webkit-box-align: $c
+  -moz-box-align: $c
+  -webkit-align-items: $c
+  -ms-flex-align: $c
   flex-wrap: $d
+  -webkit-flex-wrap: $d
+  -ms-flex-wrap: $d
+  -webkit-box-direction: normal
+  -moz-box-direction: normal
+  -webkit-box-orient: horizontal
+  -moz-box-orient: horizontal
+  -webkit-flex-direction: $e
+  -ms-flex-direction: $e
+  flex-direction: $e
 
 /* Background Image Settings */
 =img($a: no-repeat, $b: center, $c: cover)
