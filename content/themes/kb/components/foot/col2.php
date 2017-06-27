@@ -7,7 +7,7 @@
 <div class="top">
   <?php if ( have_rows( 'foot_links', 'option' ) ) : while ( have_rows( 'foot_links', 'option' ) ) : the_row(); ?>
     <p>
-      <a href="<?php echo get_sub_field('foot_links-link'); ?>" target="_blank">
+      <a href="<?php echo get_sub_field('foot_links-link'); ?>">
         <?php echo get_sub_field('foot_links-title'); ?>
       </a>
     </p>

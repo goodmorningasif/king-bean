@@ -5,5 +5,5 @@
 ?>
 
 <div class="shop-button">
-	<?php echo get_field( 'main_cta' ); ?>
+	<a href="<?php echo get_field( 'main_link' ); ?>"><?php echo get_field( 'main_cta' ); ?></a>
 </div>

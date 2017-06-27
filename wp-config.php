@@ -89,7 +89,7 @@ define('WPLANG', '');
  */
 
 $local_path = '10.1.10.96/king-bean';
-// $_SERVER['SERVER_NAME']
+// $local_path = $_SERVER['SERVER_NAME'];
 
 
 if (!defined('WP_SITEURL')) {

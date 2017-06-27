@@ -24,7 +24,7 @@
     </a>
   </div>
   <div class="shop-link">
-    <a href="https://shop.kingbean.com/cart">
+    <a href="https://shop.kingbean.com">
       <?php echo file_get_contents($GLOBALS['url'].'/assets/svg/king-bean-seal.svg'); ?>
     </a>
   </div>

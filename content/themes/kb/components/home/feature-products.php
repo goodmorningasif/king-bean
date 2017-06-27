@@ -10,7 +10,7 @@
 	  	the_row();
 			  $product = get_sub_field( 'fp_product-image' ); ?>
 				<div class="single-product">
-			    <a href="<?php get_sub_field( 'fp_link' ); ?>">
+			    <a href="<?php echo get_sub_field( 'fp_link' ); ?>">
 					<div class="image"
 					  style="background-image:url(<?php echo $product['url']; ?>)">
 					</div>
