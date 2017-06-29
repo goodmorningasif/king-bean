@@ -31,6 +31,11 @@
 			<?php echo file_get_contents($GLOBALS['url'].'/assets/svg/press.svg'); ?>	
 		</a>
 	</div>
+  <div class="p-login">
+		<a href="https://shop.kingbean.com/account">
+			<?php echo file_get_contents($GLOBALS['url'].'/assets/svg/login.svg'); ?>	
+		</a>
+	</div>
 	<div class="bottom-row">
 		<h3>
 			<a href="https://<?php echo $GLOBALS['root']; ?>/faq">
@@ -44,7 +49,7 @@
 		</div>
 		<h3>
 		  <a href="http://<?php echo $GLOBALS['root']; ?>/journal">
-		    BLOG
+		    <!-- BLOG --> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		  </a>
 		</h3>
 	</div>
