@@ -5,7 +5,7 @@
 ?>
 
 <div class="blog-nav">
-	<h3>Journal</h3>
+	<h3>Katie's Blog</h3>
 	<ul class="categories">
 	  <?php $cats = get_categories(); 
 	    foreach( $cats as $cat ) : ?>

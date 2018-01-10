@@ -8,6 +8,7 @@ article.blog
   width: 80%
   margin: 80px auto 160px
 
+
   +tablet
     width: 850px
 
@@ -17,8 +18,23 @@ article.blog
   > header
     padding-left: 40px
     padding-right: 40px
+
     > p 
       margin-top: 40px
+
+    > h3
+      margin-bottom: 10px
+
+    > h4
+      padding-bottom: 15px
+      margin-bottom: 40px
+
+      &:before
+        display: block
+        content: " "
+        height: 4px
+        width: 60px
+        margin: 12px auto
 
 article:nth-last-child(n)
   margin-bottom: 60px
@@ -62,9 +78,21 @@ article.blog
     color: $beige
     text-align: center
 
+    > h3
+      text-transform: uppercase
+      font-size: 0.8em
+
+    > h4
+      text-transform: uppercase
+      font-size: 0.45em
+
+      &:before
+        background-color: $gold
+
+
     > p
       font-family: 'UniversLT-Condensed', sans-serif
-      font-size: 0.5em
+      font-size: 0.65em
       letter-spacing: 0.07em
       line-height: 1.4em
 

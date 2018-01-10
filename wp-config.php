@@ -88,7 +88,7 @@ define('WPLANG', '');
  * These are required because wordpress is installed in a subdirectory.
  */
 
-$local_path = '10.1.10.96/king-bean';
+$local_path = 'localhost/king-bean';
 // $local_path = $_SERVER['SERVER_NAME'];
 
 

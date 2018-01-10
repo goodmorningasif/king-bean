@@ -8,6 +8,8 @@
 ?>
 <article class="blog cat-<?php echo $this_cat[0]; ?>">
   <header>
+    <h3><?php echo get_the_title(); ?></h3>
+    <h4><?php echo get_the_date(); ?></h4>
     <?php echo get_field('afc_intro-p'); ?>
     <p>
       <?php echo get_the_content(); ?>
@@ -31,6 +33,8 @@
       <img class="full-img" 
         src="<?php echo $full_img['url']; ?>" 
         alt="<?php echo $full_img['alt']; ?>">  
+      <?php elseif ( get_row_layout() === 'afc_video-r' ) : 
+        echo get_sub_field('afc_video-r-video'); ?>
       <?php endif; ?>
     <?php endwhile;endif; ?>
   </div>
