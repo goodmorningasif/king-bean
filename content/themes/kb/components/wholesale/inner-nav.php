@@ -21,3 +21,10 @@
 <h3>
   <?php echo get_field('wh_intro-copy'); ?>
 </h3>
+<?php if ( get_field('wh_intro-video') ) : ?>
+  <div class="video-player">
+    <div class="video">
+      <?php echo get_field('wh_intro-video'); ?>
+    </div>
+  </div>
+<?php endif; ?>
